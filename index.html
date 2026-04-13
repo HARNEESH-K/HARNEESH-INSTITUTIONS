@@ -19,88 +19,43 @@
             <li><a href="#about">About</a></li>
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#courses">Courses</a></li>
+            <li id="nav-profile-link"><a href="#profile">Profile</a></li>
             <li><a href="#auth" class="btn btn-logout" id="logout-btn">Logout</a></li>
         </ul>
     </nav>
     <section id="auth">
         <div class="content-wrapper" style="display:flex;justify-content:center;align-items:center;min-height:100vh;">
-            <div class="login-card-picly glass-panel"
-                style="display:flex;border-radius:20px;overflow:hidden;width:100%;max-width:800px;min-height:480px;flex-wrap:wrap;">
-                <div class="card-left-picly"
-                    style="background:rgba(0,0,0,0.3);border-right:1px solid var(--glass-border);flex:1;min-width:300px;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:2rem;">
-                    <img src="HArneesh Institutions Logo.png"
-                        alt="Company Logo" style="max-width:150px;height:auto;border-radius:10px;margin-bottom:0.5rem;">
-                    <p style="color:var(--text-main);font-weight:600;font-size:1.2rem;text-align:center;margin:0;">
-                        Harneesh Institutions</p>
+            <div class="login-card-picly glass-panel" style="display:flex;border-radius:20px;overflow:hidden;width:100%;max-width:800px;min-height:480px;flex-wrap:wrap;">
+                <div class="card-left-picly" style="background:rgba(0,0,0,0.3);border-right:1px solid var(--glass-border);flex:1;min-width:300px;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:2rem;">
+                    <img src="C:\SEM 2\HTML Files\exercises in ppt\Harneesh Groups of Institution_files\HArneesh Institutions Logo.png" alt="Company Logo" style="max-width:150px;height:auto;border-radius:10px;margin-bottom:0.5rem;">
+                    <p style="color:var(--text-main);font-weight:600;font-size:1.2rem;text-align:center;margin:0;">Harneesh Institutions</p>
                 </div>
-                <div class="card-right-picly"
-                    style="flex:1.2;min-width:350px;position:relative;padding:0;color:var(--text-main);background:transparent;">
-                    <div class="auth-container" style="margin:0;width:100%;min-height:480px;"><input type="radio"
-                            name="auth-toggle" id="toggle-register" class="auth-toggle"><input type="radio"
-                            name="auth-toggle" id="toggle-login" class="auth-toggle" checked>
-                        <div class="form-box login-box"
-                            style="background:none;border:none;box-shadow:none;padding:3rem;">
-                            <h2
-                                style="color:var(--text-main);font-size:2.2rem;text-align:center;margin-bottom:2.5rem;font-weight:600;background:none;-webkit-text-fill-color:initial;">
-                                Log In</h2>
+                <div class="card-right-picly" style="flex:1.2;min-width:350px;position:relative;padding:0;color:var(--text-main);background:transparent;">
+                    <div class="auth-container" style="margin:0;width:100%;min-height:480px;">
+                        <input type="radio" name="auth-toggle" id="toggle-register" class="auth-toggle"><input type="radio" name="auth-toggle" id="toggle-login" class="auth-toggle" checked>
+                        <div class="form-box login-box" style="background:none;border:none;box-shadow:none;padding:3rem;">
+                            <h2 style="color:var(--text-main);font-size:2.2rem;text-align:center;margin-bottom:2.5rem;font-weight:600;background:none;-webkit-text-fill-color:initial;">Log In</h2>
                             <form action="#home" method="GET">
-                                <div class="input-line-picly" style="margin-bottom:2rem;"><input type="text"
-                                        id="login-email" name="email" placeholder="Username" required
-                                        style="width:100%;padding:10px 0;border:none;border-bottom:1px solid var(--text-muted);background:transparent;color:var(--text-main);font-size:1rem;outline:none;transition:border-color 0.3s;border-radius:0;"
-                                        onfocus="this.style.borderBottomColor='var(--primary-color)'"
-                                        onblur="this.style.borderBottomColor='var(--text-muted)'"></div>
-                                <div class="input-line-picly" style="margin-bottom:2rem;"><input type="password"
-                                        id="login-password" name="password" placeholder="Password" required
-                                        minlength="8"
-                                        style="width:100%;padding:10px 0;border:none;border-bottom:1px solid var(--text-muted);background:transparent;color:var(--text-main);font-size:1rem;outline:none;transition:border-color 0.3s;border-radius:0;"
-                                        onfocus="this.style.borderBottomColor='var(--primary-color)'"
-                                        onblur="this.style.borderBottomColor='var(--text-muted)'"></div>
-                                <div class="checkbox-remember-picly"
-                                    style="display:flex;justify-content:center;align-items:center;gap:0.5rem;margin-bottom:2rem;color:var(--text-muted);font-size:0.9rem;">
-                                    <input type="checkbox" id="remember-me"
-                                        style="accent-color:var(--primary-color);cursor:pointer;width:auto;"><label
-                                        for="remember-me" style="cursor:pointer;">Remember Me!</label>
-                                </div><button type="submit" class="btn-pill-picly"
-                                    style="display:block;width:60%;margin:0 auto 1.5rem auto;padding:10px;background:transparent;border:1px solid var(--primary-color);border-radius:30px;color:var(--text-main);font-weight:600;font-size:1rem;cursor:pointer;transition:all 0.3s ease;"
-                                    onmouseover="this.style.background='var(--primary-color)'; this.style.color='white';"
-                                    onmouseout="this.style.background='transparent'; this.style.color='var(--text-main)';">Submit</button>
-                                <p style="text-align:center;font-size:0.9rem;color:var(--text-muted);">Don't have an
-                                    account? <label for="toggle-register"
-                                        style="color:var(--secondary-color);cursor:pointer;font-weight:600;">Register
-                                        Here</label></p>
+                                <div class="input-line-picly" style="margin-bottom:2rem;"><input type="text" id="login-email" name="email" placeholder="Username" required style="width:100%;padding:10px 0;border:none;border-bottom:1px solid var(--text-muted);background:transparent;color:var(--text-main);font-size:1rem;outline:none;transition:border-color 0.3s;border-radius:0;" onfocus="this.style.borderBottomColor='var(--primary-color)'" onblur="this.style.borderBottomColor='var(--text-muted)'"></div>
+                                <div class="input-line-picly" style="margin-bottom:2rem;"><input type="password" id="login-password" name="password" placeholder="Password" required minlength="8" style="width:100%;padding:10px 0;border:none;border-bottom:1px solid var(--text-muted);background:transparent;color:var(--text-main);font-size:1rem;outline:none;transition:border-color 0.3s;border-radius:0;" onfocus="this.style.borderBottomColor='var(--primary-color)'" onblur="this.style.borderBottomColor='var(--text-muted)'"></div>
+                                <div class="checkbox-remember-picly" style="display:flex;justify-content:center;align-items:center;gap:0.5rem;margin-bottom:1rem;color:var(--text-muted);font-size:0.9rem;"><input type="checkbox" id="remember-me" style="accent-color:var(--primary-color);cursor:pointer;width:auto;"><label for="remember-me" style="cursor:pointer;">Remember Me!</label></div>
+                                <button type="submit" class="btn-pill-picly" style="display:block;width:60%;margin:0 auto 1.5rem auto;padding:10px;background:transparent;border:1px solid var(--primary-color);border-radius:30px;color:var(--text-main);font-weight:600;font-size:1rem;cursor:pointer;transition:all 0.3s ease;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white';" onmouseout="this.style.background='transparent'; this.style.color='var(--text-main)';">Submit</button>
+                                <p style="text-align:center;font-size:0.9rem;color:var(--text-muted);">Don't have an account? <label for="toggle-register" style="color:var(--secondary-color);cursor:pointer;font-weight:600;">Register Here</label></p>
                             </form>
                         </div>
-                        <div class="form-box register-box"
-                            style="background:none;border:none;box-shadow:none;padding:3rem;">
-                            <h2
-                                style="color:var(--text-main);font-size:2.2rem;text-align:center;margin-bottom:2.5rem;font-weight:600;background:none;-webkit-text-fill-color:initial;">
-                                Register</h2>
-                            <form action="#home" method="GET">
-                                <div class="input-line-picly" style="margin-bottom:1.5rem;"><input type="text"
-                                        id="signup-name" name="name" placeholder="Full Name" required
-                                        pattern="[a-zA-Z\s]+"
-                                        style="width:100%;padding:10px 0;border:none;border-bottom:1px solid var(--text-muted);background:transparent;color:var(--text-main);font-size:1rem;outline:none;transition:border-color 0.3s;border-radius:0;"
-                                        onfocus="this.style.borderBottomColor='var(--primary-color)'"
-                                        onblur="this.style.borderBottomColor='var(--text-muted)'"></div>
-                                <div class="input-line-picly" style="margin-bottom:1.5rem;"><input type="email"
-                                        id="signup-email" name="email" placeholder="Email Address" required
-                                        style="width:100%;padding:10px 0;border:none;border-bottom:1px solid var(--text-muted);background:transparent;color:var(--text-main);font-size:1rem;outline:none;transition:border-color 0.3s;border-radius:0;"
-                                        onfocus="this.style.borderBottomColor='var(--primary-color)'"
-                                        onblur="this.style.borderBottomColor='var(--text-muted)'"></div>
-                                <div class="input-line-picly" style="margin-bottom:2rem;"><input type="password"
-                                        id="signup-password" name="password" placeholder="Password (Min 8 chars)"
-                                        required minlength="8"
-                                        style="width:100%;padding:10px 0;border:none;border-bottom:1px solid var(--text-muted);background:transparent;color:var(--text-main);font-size:1rem;outline:none;transition:border-color 0.3s;border-radius:0;"
-                                        onfocus="this.style.borderBottomColor='var(--primary-color)'"
-                                        onblur="this.style.borderBottomColor='var(--text-muted)'"></div><button
-                                    type="submit" class="btn-pill-picly"
-                                    style="display:block;width:60%;margin:0 auto 1.5rem auto;padding:10px;background:transparent;border:1px solid var(--primary-color);border-radius:30px;color:var(--text-main);font-weight:600;font-size:1rem;cursor:pointer;transition:all 0.3s ease;"
-                                    onmouseover="this.style.background='var(--primary-color)'; this.style.color='white';"
-                                    onmouseout="this.style.background='transparent'; this.style.color='var(--text-main)';">Submit</button>
-                                <p style="text-align:center;font-size:0.9rem;color:var(--text-muted);">Already have an
-                                    account? <label for="toggle-login"
-                                        style="color:var(--secondary-color);cursor:pointer;font-weight:600;">Log In
-                                        Here</label></p>
+                        <div class="form-box register-box" style="background:none;border:none;box-shadow:none;padding:3rem;">
+                            <h2 style="color:var(--text-main);font-size:2.2rem;text-align:center;margin-bottom:2.5rem;font-weight:600;background:none;-webkit-text-fill-color:initial;">Register</h2>
+                            <form id="registration-form">
+                                <div style="max-height: 220px; overflow-y: auto; overflow-x: hidden; padding-right: 10px; margin-bottom: 2rem;">
+                                    <div class="input-line-picly" style="margin-bottom:1.5rem;"><input type="text" id="signup-name" name="name" placeholder="Full Name" required pattern="[a-zA-Z\s]+" style="width:100%;padding:10px 0;border:none;border-bottom:1px solid var(--text-muted);background:transparent;color:var(--text-main);font-size:1rem;outline:none;transition:border-color 0.3s;border-radius:0;" onfocus="this.style.borderBottomColor='var(--primary-color)'" onblur="this.style.borderBottomColor='var(--text-muted)'"></div>
+                                    <div class="input-line-picly" style="margin-bottom:1.5rem;"><input type="email" id="signup-email" name="email" placeholder="Email Address" required style="width:100%;padding:10px 0;border:none;border-bottom:1px solid var(--text-muted);background:transparent;color:var(--text-main);font-size:1rem;outline:none;transition:border-color 0.3s;border-radius:0;" onfocus="this.style.borderBottomColor='var(--primary-color)'" onblur="this.style.borderBottomColor='var(--text-muted)'"></div>
+                                    <div class="input-line-picly" style="margin-bottom:1.5rem;"><input type="tel" id="signup-phone" name="phone" placeholder="Phone Number" required style="width:100%;padding:10px 0;border:none;border-bottom:1px solid var(--text-muted);background:transparent;color:var(--text-main);font-size:1rem;outline:none;transition:border-color 0.3s;border-radius:0;" onfocus="this.style.borderBottomColor='var(--primary-color)'" onblur="this.style.borderBottomColor='var(--text-muted)'"></div>
+                                    <div class="input-line-picly" style="margin-bottom:1.5rem;"><input type="date" id="signup-dob" name="dob" required style="width:100%;padding:10px 0;border:none;border-bottom:1px solid var(--text-muted);background:transparent;color:var(--text-main);font-size:1rem;outline:none;transition:border-color 0.3s;color-scheme:dark;border-radius:0;" onfocus="this.style.borderBottomColor='var(--primary-color)'" onblur="this.style.borderBottomColor='var(--text-muted)'"></div>
+                                    <div class="input-line-picly" style="margin-bottom:1.5rem;"><input type="text" id="signup-blood" name="blood" placeholder="Blood Group (e.g. O+)" required style="width:100%;padding:10px 0;border:none;border-bottom:1px solid var(--text-muted);background:transparent;color:var(--text-main);font-size:1rem;outline:none;transition:border-color 0.3s;border-radius:0;" onfocus="this.style.borderBottomColor='var(--primary-color)'" onblur="this.style.borderBottomColor='var(--text-muted)'"></div>
+                                    <div class="input-line-picly" style="margin-bottom:1.5rem;"><input type="password" id="signup-password" name="password" placeholder="Password (Min 8 chars)" required minlength="8" style="width:100%;padding:10px 0;border:none;border-bottom:1px solid var(--text-muted);background:transparent;color:var(--text-main);font-size:1rem;outline:none;transition:border-color 0.3s;border-radius:0;" onfocus="this.style.borderBottomColor='var(--primary-color)'" onblur="this.style.borderBottomColor='var(--text-muted)'"></div>
+                                </div>
+                                <button type="submit" class="btn-pill-picly" style="display:block;width:60%;margin:0 auto 1.5rem auto;padding:10px;background:transparent;border:1px solid var(--primary-color);border-radius:30px;color:var(--text-main);font-weight:600;font-size:1rem;cursor:pointer;transition:all 0.3s ease;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white';" onmouseout="this.style.background='transparent'; this.style.color='var(--text-main)';">Submit</button>
+                                <p style="text-align:center;font-size:0.9rem;color:var(--text-muted);">Already have an account? <label for="toggle-login" style="color:var(--secondary-color);cursor:pointer;font-weight:600;">Log In Here</label></p>
                             </form>
                         </div>
                     </div>
@@ -168,49 +123,49 @@
                     </div>
                     <div class="gallery-item glass-panel" onclick="openGalleryModal('modal-labs')"
                         style="cursor: pointer;"><img
-                            src="Harneesh Laboratory.png"
+                            src="C:\\SEM 2\\HTML Files\\exercises in ppt\\Harneesh Groups of Institution_files\\Harneesh Laboratory.png"
                             alt="Labs Offered in Our College">
                         <div class="gallery-caption">Labs Offered in Our College</div>
                     </div>
                     <div class="gallery-item glass-panel" onclick="openGalleryModal('modal-sports')"
                         style="cursor: pointer;"><img
-                            src="Harneesh Sports Complex.png"
+                            src="C:\\SEM 2\\HTML Files\\exercises in ppt\\Harneesh Groups of Institution_files\\Harneesh Sports Complex.png"
                             alt="Sports Complex">
                         <div class="gallery-caption">Sports Complex</div>
                     </div>
                     <div class="gallery-item glass-panel" onclick="openGalleryModal('modal-auditorium')"
                         style="cursor: pointer;"><img
-                            src="Harneesh Auditorium.png"
+                            src="C:\\SEM 2\\HTML Files\\exercises in ppt\\Harneesh Groups of Institution_files\\Harneesh Auditorium.png"
                             alt="Auditorium">
                         <div class="gallery-caption">Auditorium</div>
                     </div>
                     <div class="gallery-item glass-panel" onclick="openGalleryModal('modal-innovation')"
                         style="cursor: pointer;"><img
-                            src="Harneesh Innovation Hub.png"
+                            src="C:\\SEM 2\\HTML Files\\exercises in ppt\\Harneesh Groups of Institution_files\\Harneesh Innovation Hub.png"
                             alt="Innovation Hub">
                         <div class="gallery-caption">Innovation Hub</div>
                     </div>
                     <div class="gallery-item glass-panel" onclick="openGalleryModal('modal-green')"
                         style="cursor: pointer;"><img
-                            src="Harneesh Green Area.png"
+                            src="C:\\SEM 2\\HTML Files\\exercises in ppt\\Harneesh Groups of Institution_files\\Harneesh Green Area.png"
                             alt="Green Campus Area">
                         <div class="gallery-caption">Green Campus Area</div>
                     </div>
                     <div class="gallery-item glass-panel" onclick="openGalleryModal('modal-hostel')"
                         style="cursor: pointer;"><img
-                            src="harneesh hostels.png"
+                            src="C:\SEM 2\HTML Files\exercises in ppt\Harneesh Groups of Institution_files\harneesh hostels.png"
                             alt="Hostel Facilities">
                         <div class="gallery-caption">Hostel Facilities</div>
                     </div>
                     <div class="gallery-item glass-panel" onclick="openGalleryModal('modal-canteen')"
                         style="cursor: pointer;"><img
-                            src="Harneesh Canteens.png"
+                            src="C:\SEM 2\HTML Files\exercises in ppt\Harneesh Groups of Institution_files\Harneesh Canteens.png"
                             alt="College Canteen">
                         <div class="gallery-caption">College Canteen</div>
                     </div>
                     <div class="gallery-item glass-panel" onclick="openGalleryModal('modal-academic')"
                         style="cursor: pointer;"><img
-                            src="Harneesh classes.png"
+                            src="C:\SEM 2\HTML Files\exercises in ppt\Harneesh Groups of Institution_files\Harneesh classes.png"
                             alt="Academic Block">
                         <div class="gallery-caption">Academic Block</div>
                     </div>
@@ -225,198 +180,286 @@
                         <div class="course-icon">⚙️</div>
                         <h3>B.Tech Engineering</h3>
                         <p style="margin: 1rem 0;">Computer Science, Mechanical, Civil, and Electronics disciplines with
-                            guaranteed placement assistance.</p><a href="#apply" class="btn" style="width:100%;">Apply
-                            Now</a>
+                            guaranteed placement assistance.<br><strong style="color:var(--primary-color);">Fee: ₹1,90,000 / year</strong></p>
+                        <a href="#apply" class="btn" style="width:100%;">Apply Now</a>
                     </div>
                     <div class="course-card glass-panel">
                         <div class="course-icon">📈</div>
                         <h3>MBA / BBA</h3>
                         <p style="margin: 1rem 0;">Mastering business administration, finance, and human resources for
-                            the executives of tomorrow.</p><a href="#apply" class="btn" style="width:100%;">Apply
-                            Now</a>
+                            the executives of tomorrow.<br><strong style="color:var(--primary-color);">Fee: ₹2,40,000 / year</strong></p>
+                        <a href="#apply" class="btn" style="width:100%;">Apply Now</a>
                     </div>
                     <div class="course-card glass-panel">
                         <div class="course-icon">💻</div>
                         <h3>BCA / MCA</h3>
                         <p style="margin: 1rem 0;">Advanced computer applications, software development, and modern IT
-                            infrastructure programs.</p><a href="#apply" class="btn" style="width:100%;">Apply Now</a>
+                            infrastructure programs.<br><strong style="color:var(--primary-color);">Fee: ₹1,50,000 / year</strong></p>
+                        <a href="#apply" class="btn" style="width:100%;">Apply Now</a>
                     </div>
                     <div class="course-card glass-panel">
                         <div class="course-icon">⚙️</div>
                         <h3>Mechanical Engineering</h3>
                         <p style="margin: 1rem 0;">Delve into the design, analysis, and manufacturing of mechanical
-                            systems with our state-of-the-art labs.</p><a href="#apply" class="btn"
+                            systems with our state-of-the-art labs.<br><strong style="color:var(--primary-color);">Fee: ₹1,95,000 / year</strong></p>
+                        <a href="#apply" class="btn"
                             style="width:100%;">Apply Now</a>
                     </div>
                     <div class="course-card glass-panel">
                         <div class="course-icon">🏗️</div>
                         <h3>Civil Engineering</h3>
                         <p style="margin: 1rem 0;">Learn to build the future with structural design, urban planning, and
-                            sustainable construction practices.</p><a href="#apply" class="btn"
+                            sustainable construction practices.<br><strong style="color:var(--primary-color);">Fee: ₹1,75,000 / year</strong></p>
+                        <a href="#apply" class="btn"
                             style="width:100%;">Apply Now</a>
                     </div>
                     <div class="course-card glass-panel">
                         <div class="course-icon">🤖</div>
                         <h3>Artificial Intelligence</h3>
                         <p style="margin: 1rem 0;">Master machine learning, neural networks, and AI fundamentals to
-                            innovate the software of tomorrow.</p><a href="#apply" class="btn" style="width:100%;">Apply
-                            Now</a>
+                            innovate the software of tomorrow.<br><strong style="color:var(--primary-color);">Fee: ₹2,50,000 / year</strong></p>
+                        <a href="#apply" class="btn" style="width:100%;">Apply Now</a>
                     </div>
                 </div>
             </div>
         </section>
         <section id="apply" style="display:none;">
-            <div class="application-container glass-panel"
-                style="width:100%;max-width:900px;margin:0 auto;padding:3rem;"><button type="button"
-                    class="btn btn-logout" onclick="window.location.hash='#courses'"
-                    style="margin-bottom:2rem;display:inline-flex;align-items:center;gap:0.5rem;background:transparent;border:none;color:var(--secondary-color);padding:0;font-size:1.1rem;">&larr;
-                    Back to Courses</button>
-                <h1 style="font-size:3rem;text-align:center;margin-bottom:3rem;color:var(--primary-color);">Student
-                    Application Form Online</h1>
-                <form action="#home" method="GET">
-                    <div style="margin-bottom:2.5rem;">
-                        <h3 style="color:var(--secondary-color);font-size:1.5rem;margin-bottom:1.5rem;">1. Applicant
-                            Information</h3>
-                        <ul
-                            style="list-style-type:disc;margin-left:2rem;color:var(--text-main);font-size:1.1rem;line-height:2.5;">
-                            <li style="display:flex;align-items:center;flex-wrap:wrap;"><span
-                                    style="min-width:120px;font-weight:600;">Full Name:</span><input type="text"
-                                    name="full-name" required
-                                    style="flex:1;min-width:200px;background:transparent;border:none;border-bottom:1px solid var(--text-muted);color:white;outline:none;font-size:1.1rem;padding:5px;">
-                            </li>
-                            <li style="display:flex;align-items:center;flex-wrap:wrap;"><span
-                                    style="min-width:140px;font-weight:600;">Date of Birth:</span><input type="date"
-                                    name="dob" required
-                                    style="flex:1;max-width:200px;background:transparent;color-scheme:dark;border:none;border-bottom:1px solid var(--text-muted);color:white;outline:none;font-size:1.1rem;padding:5px;">
-                            </li>
-                            <li style="display:flex;align-items:center;flex-wrap:wrap;gap:1rem;"><span
-                                    style="font-weight:600;">Gender:</span><label
-                                    style="display:inline-flex;align-items:center;gap:0.5rem;"><input type="radio"
-                                        name="gender" value="Male" required style="accent-color:var(--primary-color);">
-                                    Male</label><label style="display:inline-flex;align-items:center;gap:0.5rem;"><input
-                                        type="radio" name="gender" value="Female" required
-                                        style="accent-color:var(--primary-color);"> Female</label><label
-                                    style="display:inline-flex;align-items:center;gap:0.5rem;"><input type="radio"
-                                        name="gender" value="Other" required style="accent-color:var(--primary-color);">
-                                    Other</label></li>
-                            <li style="display:flex;align-items:center;flex-wrap:wrap;"><span
-                                    style="min-width:150px;font-weight:600;">Email Address:</span><input type="email"
-                                    name="email" required
-                                    style="flex:1;min-width:200px;background:transparent;border:none;border-bottom:1px solid var(--text-muted);color:white;outline:none;font-size:1.1rem;padding:5px;">
-                            </li>
-                            <li style="display:flex;align-items:center;flex-wrap:wrap;"><span
-                                    style="min-width:155px;font-weight:600;">Phone Number:</span><input type="tel"
-                                    name="phone" required
-                                    style="flex:1;min-width:200px;max-width:300px;background:transparent;border:none;border-bottom:1px solid var(--text-muted);color:white;outline:none;font-size:1.1rem;padding:5px;">
-                            </li>
-                        </ul>
+            <div class="application-container glass-panel" style="width:100%;max-width:900px;margin:0 auto;padding:3rem;">
+                <button type="button" class="btn btn-logout" onclick="window.location.hash='#courses'" style="margin-bottom:2rem;display:inline-flex;align-items:center;gap:0.5rem;background:transparent;border:none;color:var(--secondary-color);padding:0;font-size:1.1rem;">&larr; Back to Courses</button>
+                <h1 style="font-size:3rem;text-align:center;margin-bottom:1rem;color:var(--primary-color);">Student Application Form</h1>
+                <p style="text-align:center; color: var(--text-muted); margin-bottom: 3rem; font-size: 1.1rem;">Begin your journey towards excellence. Fill out the details below.</p>
+                
+                <form id="application-main-form" class="styled-form">
+                    
+                    <div class="form-section">
+                        <div class="form-section-header">
+                            <span class="icon">👤</span>
+                            <h3>1. Applicant Information</h3>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input type="text" name="full-name" required placeholder="Harneesh">
+                            </div>
+                            <div class="form-group">
+                                <label>Date of Birth</label>
+                                <input type="date" name="dob" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" name="email" required placeholder="harneesh@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="tel" name="phone" required placeholder="6381268129">
+                            </div>
+                            <div class="form-group full-width">
+                                <label>Gender</label>
+                                <div class="radio-group">
+                                    <label class="radio-label"><input type="radio" name="gender" value="Male" required> <span>Male</span></label>
+                                    <label class="radio-label"><input type="radio" name="gender" value="Female" required> <span>Female</span></label>
+                                    <label class="radio-label"><input type="radio" name="gender" value="Other" required> <span>Other</span></label>
+                                    <label class="radio-label"><input type="radio" name="gender" value="Rather Not To Say" required> <span>Rather Not To Say</span></label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div style="margin-bottom:2.5rem;">
-                        <h3 style="color:var(--secondary-color);font-size:1.5rem;margin-bottom:1.5rem;">2. Address
-                            Information</h3>
-                        <ul
-                            style="list-style-type:disc;margin-left:2rem;color:var(--text-main);font-size:1.1rem;line-height:2.5;">
-                            <li style="display:flex;align-items:center;flex-wrap:wrap;"><span
-                                    style="min-width:160px;font-weight:600;">Home Address:</span><input type="text"
-                                    name="address" required
-                                    style="flex:1;min-width:200px;background:transparent;border:none;border-bottom:1px solid var(--text-muted);color:white;outline:none;font-size:1.1rem;padding:5px;">
-                            </li>
-                            <li style="display:flex;align-items:center;flex-wrap:wrap;"><span
-                                    style="min-width:60px;font-weight:600;">City:</span><input type="text" name="city"
-                                    required
-                                    style="flex:1;min-width:150px;max-width:250px;background:transparent;border:none;border-bottom:1px solid var(--text-muted);color:white;outline:none;font-size:1.1rem;padding:5px;">
-                            </li>
-                            <li style="display:flex;align-items:center;flex-wrap:wrap;"><span
-                                    style="min-width:70px;font-weight:600;">State:</span><input type="text" name="state"
-                                    required
-                                    style="flex:1;min-width:150px;max-width:250px;background:transparent;border:none;border-bottom:1px solid var(--text-muted);color:white;outline:none;font-size:1.1rem;padding:5px;">
-                            </li>
-                            <li style="display:flex;align-items:center;flex-wrap:wrap;"><span
-                                    style="min-width:100px;font-weight:600;">Zip Code:</span><input type="text"
-                                    name="zip" required
-                                    style="flex:1;min-width:100px;max-width:150px;background:transparent;border:none;border-bottom:1px solid var(--text-muted);color:white;outline:none;font-size:1.1rem;padding:5px;">
-                            </li>
-                        </ul>
+
+                    <div class="form-section">
+                        <div class="form-section-header">
+                            <span class="icon">🏠</span>
+                            <h3>2. Address Information</h3>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label>Home Address</label>
+                                <input type="text" name="address" required placeholder="3/1103,Amrita Vishwa vidyappetham">
+                            </div>
+                            <div class="form-group">
+                                <label>City</label>
+                                <input type="text" name="city" required placeholder="Vengal">
+                            </div>
+                            <div class="form-group">
+                                <label>State</label>
+                                <input type="text" name="state" required placeholder="Tamil Nadu, India">
+                            </div>
+                            <div class="form-group">
+                                <label>Zip Code</label>
+                                <input type="text" name="zip" required placeholder="601103">
+                            </div>
+                        </div>
                     </div>
-                    <div style="margin-bottom:2.5rem;">
-                        <h3 style="color:var(--secondary-color);font-size:1.5rem;margin-bottom:1.5rem;">3. Academic
-                            Background</h3>
-                        <ul
-                            style="list-style-type:disc;margin-left:2rem;color:var(--text-main);font-size:1.1rem;line-height:2.5;">
-                            <li style="display:flex;align-items:center;flex-wrap:wrap;"><span
-                                    style="min-width:220px;font-weight:600;">Last School Attended:</span><input
-                                    type="text" name="last-school" required
-                                    style="flex:1;min-width:200px;background:transparent;border:none;border-bottom:1px solid var(--text-muted);color:white;outline:none;font-size:1.1rem;padding:5px;">
-                            </li>
-                            <li style="display:flex;align-items:center;flex-wrap:wrap;"><span
-                                    style="min-width:230px;font-weight:600;">Grade Level Completed:</span><input
-                                    type="text" name="grade-level" required
-                                    style="flex:1;min-width:200px;max-width:300px;background:transparent;border:none;border-bottom:1px solid var(--text-muted);color:white;outline:none;font-size:1.1rem;padding:5px;">
-                            </li>
-                            <li style="display:flex;align-items:center;flex-wrap:wrap;"><span
-                                    style="min-width:60px;font-weight:600;">GPA:</span><input type="number" step="0.01"
-                                    name="gpa" required
-                                    style="flex:1;min-width:100px;max-width:150px;background:transparent;border:none;border-bottom:1px solid var(--text-muted);color:white;outline:none;font-size:1.1rem;padding:5px;">
-                            </li>
-                        </ul>
+
+                    <div class="form-section">
+                        <div class="form-section-header">
+                            <span class="icon">🎓</span>
+                            <h3>3. Academic Background</h3>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label>Last School Attended</label>
+                                <input type="text" name="last-school" required placeholder="High School Name">
+                            </div>
+                            <div class="form-group">
+                                <label>Grade Level Completed</label>
+                                <input type="text" name="grade-level" required placeholder="12th Grade">
+                            </div>
+                            <div class="form-group">
+                                <label>GPA</label>
+                                <input type="number" step="0.01" name="gpa" required placeholder="3.8">
+                            </div>
+                        </div>
                     </div>
-                    <div style="margin-bottom:2.5rem;">
-                        <h3 style="color:var(--secondary-color);font-size:1.5rem;margin-bottom:1.5rem;">4. Course
-                            Selection</h3>
-                        <ul
-                            style="list-style-type:disc;margin-left:2rem;color:var(--text-main);font-size:1.1rem;line-height:2.5;">
-                            <li style="display:flex;align-items:center;flex-wrap:wrap;"><span
-                                    style="min-width:220px;font-weight:600;">Desired Major/Program:</span><input
-                                    type="text" id="selected-course" name="selected-course" readonly
-                                    style="flex:1;min-width:200px;background:transparent;border:none;border-bottom:1px solid var(--primary-color);color:var(--primary-color);outline:none;font-size:1.2rem;font-weight:bold;padding:5px;cursor:not-allowed;">
-                            </li>
-                            <li style="display:flex;align-items:center;flex-wrap:wrap;gap:1rem;"><span
-                                    style="font-weight:600;">Expected Start Term:</span><label
-                                    style="display:inline-flex;align-items:center;gap:0.5rem;"><input type="radio"
-                                        name="term" value="Fall" required style="accent-color:var(--primary-color);">
-                                    Fall</label><label style="display:inline-flex;align-items:center;gap:0.5rem;"><input
-                                        type="radio" name="term" value="Spring" required
-                                        style="accent-color:var(--primary-color);"> Spring</label><label
-                                    style="display:inline-flex;align-items:center;gap:0.5rem;"><input type="radio"
-                                        name="term" value="Summer" required style="accent-color:var(--primary-color);">
-                                    Summer</label></li>
-                            <li style="display:flex;align-items:center;flex-wrap:wrap;gap:1rem;"><span
-                                    style="font-weight:600;">Classes per day :</span><label
-                                    style="font-weight:600;display:inline-flex;align-items:center;gap:0.5rem;"><input
-                                        type="radio" name="status" value="Full-Time" required
-                                        style="accent-color:var(--primary-color);">Full-Time</label><label
-                                    style="font-weight:600;display:inline-flex;align-items:center;gap:0.5rem;"><input
-                                        type="radio" name="status" value="Part-Time" required
-                                        style="accent-color:var(--primary-color);">Part-Time</label></li>
-                        </ul>
+
+                    <div class="form-section">
+                        <div class="form-section-header">
+                            <span class="icon">📚</span>
+                            <h3>4. Course Selection</h3>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label>Desired Major/Program</label>
+                                <input type="text" id="selected-course" name="selected-course" readonly style="color:var(--primary-color); font-weight:bold; cursor:not-allowed; background:rgba(79, 70, 229, 0.1);" placeholder="Select a course from previous page">
+                            </div>
+                            <div class="form-group">
+                                <label>Expected Start Term</label>
+                                <div class="radio-group">
+                                    <label class="radio-label"><input type="radio" name="term" value="Fall" required> <span>Fall</span></label>
+                                    <label class="radio-label"><input type="radio" name="term" value="Spring" required> <span>Spring</span></label>
+                                    <label class="radio-label"><input type="radio" name="term" value="Summer" required> <span>Summer</span></label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Enrollment Status</label>
+                                <div class="radio-group">
+                                    <label class="radio-label"><input type="radio" name="status" value="Full-Time" required> <span>Full-Time</span></label>
+                                    <label class="radio-label"><input type="radio" name="status" value="Part-Time" required> <span>Part-Time</span></label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div style="margin-bottom:3rem;">
-                        <h3 style="color:var(--secondary-color);font-size:1.5rem;margin-bottom:1.5rem;">5.
-                            Extracurricular Involvement</h3>
-                        <ul
-                            style="list-style-type:disc;margin-left:2rem;color:var(--text-main);font-size:1.1rem;line-height:2.5;">
-                            <li style="display:flex;align-items:center;flex-wrap:wrap;"><span
-                                    style="min-width:80px;font-weight:600;">Sports:</span><input type="text"
-                                    name="sports"
-                                    style="flex:1;min-width:200px;background:transparent;border:none;border-bottom:1px solid var(--text-muted);color:white;outline:none;font-size:1.1rem;padding:5px;">
-                            </li>
-                            <li style="display:flex;align-items:center;flex-wrap:wrap;"><span
-                                    style="min-width:80px;font-weight:600;">Arts:</span><input type="text" name="arts"
-                                    style="flex:1;min-width:200px;background:transparent;border:none;border-bottom:1px solid var(--text-muted);color:white;outline:none;font-size:1.1rem;padding:5px;">
-                            </li>
-                        </ul>
+
+                    <div class="form-section">
+                        <div class="form-section-header">
+                            <span class="icon">✨</span>
+                            <h3>5. Additional Details & Quotas</h3>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>First Graduate</label>
+                                <div class="radio-group">
+                                    <label class="radio-label"><input type="radio" name="first-grad" value="Yes" required> <span>Yes</span></label>
+                                    <label class="radio-label"><input type="radio" name="first-grad" value="No" required> <span>No</span></label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Scholarship Request</label>
+                                <div class="radio-group">
+                                    <label class="radio-label"><input type="radio" name="scholarship" value="Yes" required> <span>Yes</span></label>
+                                    <label class="radio-label"><input type="radio" name="scholarship" value="No" required> <span>No</span></label>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <label>Sports Quota</label>
+                                <div class="radio-group">
+                                    <label class="radio-label"><input type="radio" name="sports-quota" value="Yes" required> <span>Yes</span></label>
+                                    <label class="radio-label"><input type="radio" name="sports-quota" value="No" required> <span>No</span></label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div style="text-align:center;margin-top:2rem;"><button type="submit" class="btn"
-                            style="font-size:1.2rem;padding:1rem 3rem;">Submit Application</button></div>
-                    <p style="text-align:center;margin-top:2rem;font-size:0.9rem;color:var(--text-muted);">Copyright
-                        &copy; Harneesh Institutions</p>
+
+                    <div style="text-align:center;margin-top:3rem;">
+                        <button type="submit" class="btn btn-submit" style="font-size:1.2rem;padding:1rem 3rem; width:100%; max-width: 400px; border-radius: 50px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4); border:none; color:white; font-weight:bold; cursor:pointer;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">🚀 Submit Application</button>
+                    </div>
+                    <p style="text-align:center;margin-top:2rem;font-size:0.9rem;color:var(--text-muted);">Copyright &copy; 2026 Harneesh Institutions</p>
                 </form>
+            </div>
+        </section>
+
+        <section id="profile" style="display:none;">
+            <div class="content-wrapper" style="display:flex;justify-content:center;align-items:center;">
+                <div class="glass-panel" style="width:100%;max-width:700px;padding:3rem;border-radius:20px;">
+                    <h2 style="color:var(--primary-color);margin-bottom:2rem;text-align:center;font-size:2.5rem;background:none;-webkit-text-fill-color:initial;">User Profile</h2>
+                    <div style="display:flex;flex-wrap:wrap;gap:2rem;align-items:center;">
+                        <div style="flex:1;text-align:center;">
+                            <div style="width:150px;height:150px;border-radius:50%;background:linear-gradient(135deg, var(--primary-color), var(--secondary-color));margin:0 auto 1.5rem auto;display:flex;align-items:center;justify-content:center;font-size:4rem;color:white;box-shadow:0 10px 25px rgba(79,70,229,0.4);">
+                                <span id="profile-initial">👤</span>
+                            </div>
+                            <h3 id="profile-display-name" style="font-size:1.8rem;color:var(--text-main);margin-bottom:0.5rem;background:none;-webkit-text-fill-color:initial;">Student Name</h3>
+                        </div>
+                        <div style="flex:2;min-width:300px;">
+                            <ul style="list-style:none;padding:0;color:var(--text-main);font-size:1.1rem;line-height:2;">
+                                <li style="border-bottom:1px solid var(--glass-border);padding:0.5rem 0;display:flex;justify-content:space-between;"><strong>Email:</strong> <input type="email" id="profile-display-email" class="profile-input" style="background:transparent;border:none;color:var(--text-muted);text-align:right;font-size:1.1rem;outline:none;" readonly value="---"></li>
+                                <li style="border-bottom:1px solid var(--glass-border);padding:0.5rem 0;display:flex;justify-content:space-between;"><strong>Phone:</strong> <input type="tel" id="profile-display-phone" class="profile-input" style="background:transparent;border:none;color:var(--text-muted);text-align:right;font-size:1.1rem;outline:none;" readonly value="---"></li>
+                                <li style="border-bottom:1px solid var(--glass-border);padding:0.5rem 0;display:flex;justify-content:space-between;"><strong>Date of Birth:</strong> <input type="date" id="profile-display-dob" class="profile-input" style="background:transparent;border:none;color:var(--text-muted);text-align:right;font-size:1.1rem;outline:none;" readonly value=""></li>
+                                <li style="border-bottom:1px solid var(--glass-border);padding:0.5rem 0;display:flex;justify-content:space-between;"><strong>Blood Group:</strong> <input type="text" id="profile-display-blood" class="profile-input" style="background:transparent;border:none;color:var(--text-muted);text-align:right;font-size:1.1rem;outline:none;" readonly value="---"></li>
+                            </ul>
+                            <div style="text-align:center;margin-top:2rem;display:flex;gap:1rem;justify-content:center;">
+                                <button type="button" id="btn-edit-profile" class="btn" style="border-radius:30px;padding:0.8rem 2rem;">Edit Profile</button>
+                                <a href="#courses" class="btn" style="border-radius:30px;padding:0.8rem 2rem;background:transparent;border:1px solid var(--primary-color);">Browse Courses</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="payment" style="display:none;">
+            <div class="content-wrapper" style="display:flex;justify-content:center;align-items:center;">
+                <div class="glass-panel" style="width:100%;max-width:900px;padding:3rem;border-radius:20px;">
+                    <button type="button" class="btn btn-logout" onclick="window.location.hash='#apply'" style="margin-bottom:2rem;display:inline-flex;align-items:center;gap:0.5rem;background:transparent;border:none;color:var(--secondary-color);padding:0;font-size:1.1rem;">&larr; Back to Application</button>
+                    <h2 style="color:var(--primary-color);margin-bottom:1rem;text-align:center;font-size:2.5rem;background:none;-webkit-text-fill-color:initial;">Fee Payment Portal</h2>
+                    <p style="text-align:center; color: var(--text-muted); margin-bottom: 3rem; font-size: 1.1rem;">Complete your application by clearing the requisite admission fees.</p>
+                    
+                    <div style="display:flex;flex-wrap:wrap;gap:3rem;margin-top:2rem;">
+                        <!-- Fee Breakdown -->
+                        <div style="flex:1;min-width:300px;background:rgba(0,0,0,0.2);padding:2rem;border-radius:12px;border:1px solid var(--glass-border);">
+                            <h3 style="color:var(--secondary-color);margin-bottom:1.5rem;font-size:1.4rem;">Fee Structure</h3>
+                            <h4 id="payment-course-name" style="color:white;margin-bottom:1.5rem;font-size:1.2rem;border-bottom:1px solid rgba(255,255,255,0.1);padding-bottom:1rem;">Course Name</h4>
+                            
+                            <ul id="payment-fee-list" style="list-style:none;padding:0;color:var(--text-muted);line-height:2.5;font-size:1.05rem;">
+                                <!-- dynamically populated -->
+                            </ul>
+                            
+                            <div style="margin-top:1.5rem;border-top:1px solid rgba(255,255,255,0.2);padding-top:1.5rem;display:flex;justify-content:space-between;color:white;font-weight:bold;font-size:1.4rem;">
+                                <span>Total Amount:</span>
+                                <span id="payment-total-amount">₹0</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Payment Form -->
+                        <div style="flex:1.2;min-width:300px;">
+                            <h3 style="color:var(--secondary-color);margin-bottom:1.5rem;font-size:1.4rem;">Payment Details</h3>
+                            <form id="checkout-form" class="styled-form" style="gap:1.5rem;">
+                                <div class="form-group full-width" style="margin-bottom: 1rem;">
+                                    <label>Cardholder Name</label>
+                                    <input type="text" required placeholder="Name on Card" style="width:100%;padding:1rem;background:rgba(255, 255, 255, 0.05);border:1px solid var(--glass-border);border-radius:8px;color:white;font-size:1rem;outline:none;">
+                                </div>
+                                <div class="form-group full-width" style="margin-bottom: 1rem;">
+                                    <label>Card Number</label>
+                                    <input type="text" required pattern="\d{16}" placeholder="1234 5678 9101 1121" title="16 digit card number" style="width:100%;padding:1rem;background:rgba(255, 255, 255, 0.05);border:1px solid var(--glass-border);border-radius:8px;color:white;font-size:1rem;outline:none;">
+                                </div>
+                                <div style="display:flex;gap:1rem;margin-bottom: 2rem;">
+                                    <div class="form-group" style="flex:1;">
+                                        <label>Expiry Date</label>
+                                        <input type="text" required pattern="(0[1-9]|1[0-2])\/?([0-9]{2})" placeholder="MM/YY" title="Format: MM/YY" style="width:100%;padding:1rem;background:rgba(255, 255, 255, 0.05);border:1px solid var(--glass-border);border-radius:8px;color:white;font-size:1rem;outline:none;">
+                                    </div>
+                                    <div class="form-group" style="flex:1;">
+                                        <label>CVV</label>
+                                        <input type="password" required pattern="\d{3,4}" placeholder="123" title="3 or 4 digit CVV" style="width:100%;padding:1rem;background:rgba(255, 255, 255, 0.05);border:1px solid var(--glass-border);border-radius:8px;color:white;font-size:1rem;outline:none;">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn" style="width:100%;font-size:1.2rem;padding:1rem;border-radius:50px;background:linear-gradient(135deg, var(--primary-color), var(--secondary-color));box-shadow:0 4px 15px rgba(79,70,229,0.4);border:none;color:white;font-weight:bold;cursor:pointer;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">💳 Confirm Payment</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <footer>
             <p>&copy; 2026 Harneesh Groups of Institution. All Rights Reserved. Designed purely with HTML & CSS.</p>
         </footer>
-        <!-- Gallery Modal Structure -->
         <div id="gallery-modal"
             style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 10000; justify-content: center; align-items: center; padding: 2rem;">
             <div id="gallery-modal-content" class="glass-panel"
@@ -433,7 +476,7 @@
                     style="color:var(--primary-color);margin-bottom:1.5rem;font-size:2rem;border-bottom:1px solid var(--glass-border);padding-bottom:1rem;">
                     Central Library</h2>
                 <div style="display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.5rem;"><img
-                        src="lib_portraits.png"
+                        src="C:\SEM 2\HTML Files\exercises in ppt\Harneesh Groups of Institution_files\lib_portraits.png"
                         style="width:100%;max-width:400px;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,0.5);object-fit:cover;"
                         alt="Library Portrait">
                     <div style="flex:1;min-width:300px;">
@@ -451,42 +494,20 @@
                 </div>
             </div>
             <div id="modal-labs">
-                <h2
-                    style="color:var(--primary-color);margin-bottom:1.5rem;font-size:2rem;border-bottom:1px solid var(--glass-border);padding-bottom:1rem;">
-                    Labs Offered in Our College</h2>
+                <h2 style="color:var(--primary-color);margin-bottom:1.5rem;font-size:2rem;border-bottom:1px solid var(--glass-border);padding-bottom:1rem;">Labs Offered in Our College</h2>
                 <div style="display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.5rem;">
                     <div style="flex:1;min-width:300px;">
-                        <h3 style="color:var(--secondary-color);font-size:1.5rem;margin-bottom:1rem;">Advanced
-                            Facilities & Faculty</h3>
-                        <p style="color:var(--text-muted);line-height:1.6;margin-bottom:1rem;">We offer specialized labs
-                            across various disciplines, led by faculties with decades of distinct industry and academic
-                            experience.</p>
+                        <h3 style="color:var(--secondary-color);font-size:1.5rem;margin-bottom:1rem;">Advanced Facilities & Faculty</h3>
+                        <p style="color:var(--text-muted);line-height:1.6;margin-bottom:1rem;">We offer specialized labs across various disciplines, led by faculties with decades of distinct industry and academic experience.</p>
                         <ul style="color:var(--text-main);list-style:none;padding:0;">
-                            <li
-                                style="margin-bottom:0.8rem;background:rgba(0,0,0,0.2);padding:0.8rem;border-radius:8px;">
-                                🔬 <strong style="color:var(--secondary-color);">Physics & Chemistry Labs:</strong>
-                                Faculty experience: 15+ years</li>
-                            <li
-                                style="margin-bottom:0.8rem;background:rgba(0,0,0,0.2);padding:0.8rem;border-radius:8px;">
-                                ⚙️ <strong style="color:var(--secondary-color);">Mechanical Lab:</strong> Precision
-                                tools, CNC. Faculty experience: 20+ years</li>
-                            <li
-                                style="margin-bottom:0.8rem;background:rgba(0,0,0,0.2);padding:0.8rem;border-radius:8px;">
-                                ⚡ <strong style="color:var(--secondary-color);">EEE Lab:</strong> Circuit analysis.
-                                Faculty experience: 12+ years</li>
-                            <li
-                                style="margin-bottom:0.8rem;background:rgba(0,0,0,0.2);padding:0.8rem;border-radius:8px;">
-                                💻 <strong style="color:var(--secondary-color);">CSE Lab:</strong> High-performance
-                                computing. Faculty experience: 10+ years</li>
-                            <li
-                                style="margin-bottom:0.8rem;background:rgba(0,0,0,0.2);padding:0.8rem;border-radius:8px;">
-                                🤖 <strong style="color:var(--secondary-color);">Robotics Lab:</strong> AI-powered
-                                automation. Faculty experience: 18+ years</li>
+                            <li style="margin-bottom:0.8rem;background:rgba(0,0,0,0.2);padding:0.8rem;border-radius:8px;">🔬 <strong style="color:var(--secondary-color);">Physics & Chemistry Labs:</strong> Faculty experience: 15+ years</li>
+                            <li style="margin-bottom:0.8rem;background:rgba(0,0,0,0.2);padding:0.8rem;border-radius:8px;">⚙️ <strong style="color:var(--secondary-color);">Mechanical Lab:</strong> Precision tools, CNC. Faculty experience: 20+ years</li>
+                            <li style="margin-bottom:0.8rem;background:rgba(0,0,0,0.2);padding:0.8rem;border-radius:8px;">⚡ <strong style="color:var(--secondary-color);">EEE Lab:</strong> Circuit analysis. Faculty experience: 12+ years</li>
+                            <li style="margin-bottom:0.8rem;background:rgba(0,0,0,0.2);padding:0.8rem;border-radius:8px;">💻 <strong style="color:var(--secondary-color);">CSE Lab:</strong> High-performance computing. Faculty experience: 10+ years</li>
+                            <li style="margin-bottom:0.8rem;background:rgba(0,0,0,0.2);padding:0.8rem;border-radius:8px;">🤖 <strong style="color:var(--secondary-color);">Robotics Lab:</strong> AI-powered automation. Faculty experience: 18+ years</li>
                         </ul>
-                    </div><img
-                        src="lab_physics.png"
-                        style="width:100%;max-width:400px;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,0.5);object-fit:cover;"
-                        alt="Robotics and Physics Lab">
+                    </div>
+                    <img src="C:\SEM 2\HTML Files\exercises in ppt\Harneesh Groups of Institution_files\lab_physics.png" style="width:100%;max-width:400px;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,0.5);object-fit:cover;" alt="Robotics and Physics Lab">
                 </div>
             </div>
             <div id="modal-auditorium">
@@ -494,7 +515,7 @@
                     style="color:var(--primary-color);margin-bottom:1.5rem;font-size:2rem;border-bottom:1px solid var(--glass-border);padding-bottom:1rem;">
                     Grand Auditorium</h2>
                 <div style="display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.5rem;"><img
-                        src="auditorium.png"
+                        src="C:\SEM 2\HTML Files\exercises in ppt\Harneesh Groups of Institution_files\auditorium.png"
                         style="width:100%;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,0.5);object-fit:cover;max-height:350px;"
                         alt="2000 Seat Auditorium">
                     <p
@@ -507,62 +528,33 @@
             </div>
 
             <div id="modal-sports">
-                <h2
-                    style="color:var(--primary-color);margin-bottom:1.5rem;font-size:2rem;border-bottom:1px solid var(--glass-border);padding-bottom:1rem;">
-                    Sports Complex</h2>
+                <h2 style="color:var(--primary-color);margin-bottom:1.5rem;font-size:2rem;border-bottom:1px solid var(--glass-border);padding-bottom:1rem;">Sports Complex</h2>
                 <div style="display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.5rem;">
                     <div style="flex:1;min-width:300px;">
-                        <h3 style="color:var(--secondary-color);font-size:1.5rem;margin-bottom:1rem;">Sports Offered
-                        </h3>
-                        <p style="color:var(--text-muted);line-height:1.6;margin-bottom:1rem;">We foster physical health
-                            and active competitiveness by offering diverse sports, paired with specialized coaches.</p>
+                        <h3 style="color:var(--secondary-color);font-size:1.5rem;margin-bottom:1rem;">Sports Offered</h3>
+                        <p style="color:var(--text-muted);line-height:1.6;margin-bottom:1rem;">We foster physical health and active competitiveness by offering diverse sports, paired with specialized coaches.</p>
                         <div style="display:flex;flex-wrap:wrap;gap:1rem;">
-                            <div
-                                style="background:rgba(0,0,0,0.2);padding:0.5rem 1rem;border-radius:20px;border:1px solid var(--primary-color);color:var(--text-main);">
-                                🏀 Basketball</div>
-                            <div
-                                style="background:rgba(0,0,0,0.2);padding:0.5rem 1rem;border-radius:20px;border:1px solid var(--primary-color);color:var(--text-main);">
-                                🏸 Badminton</div>
-                            <div
-                                style="background:rgba(0,0,0,0.2);padding:0.5rem 1rem;border-radius:20px;border:1px solid var(--primary-color);color:var(--text-main);">
-                                ⚽ Football</div>
-                            <div
-                                style="background:rgba(0,0,0,0.2);padding:0.5rem 1rem;border-radius:20px;border:1px solid var(--primary-color);color:var(--text-main);">
-                                🏏 Cricket</div>
-                            <div
-                                style="background:rgba(0,0,0,0.2);padding:0.5rem 1rem;border-radius:20px;border:1px solid var(--primary-color);color:var(--text-main);">
-                                🏊 Swimming</div>
-                            <div
-                                style="background:rgba(0,0,0,0.2);padding:0.5rem 1rem;border-radius:20px;border:1px solid var(--primary-color);color:var(--text-main);">
-                                🎾 Tennis</div>
+                            <div style="background:rgba(0,0,0,0.2);padding:0.5rem 1rem;border-radius:20px;border:1px solid var(--primary-color);color:var(--text-main);">🏀 Basketball</div>
+                            <div style="background:rgba(0,0,0,0.2);padding:0.5rem 1rem;border-radius:20px;border:1px solid var(--primary-color);color:var(--text-main);">🏸 Badminton</div>
+                            <div style="background:rgba(0,0,0,0.2);padding:0.5rem 1rem;border-radius:20px;border:1px solid var(--primary-color);color:var(--text-main);">⚽ Football</div>
+                            <div style="background:rgba(0,0,0,0.2);padding:0.5rem 1rem;border-radius:20px;border:1px solid var(--primary-color);color:var(--text-main);">🏏 Cricket</div>
+                            <div style="background:rgba(0,0,0,0.2);padding:0.5rem 1rem;border-radius:20px;border:1px solid var(--primary-color);color:var(--text-main);">🏊 Swimming</div>
+                            <div style="background:rgba(0,0,0,0.2);padding:0.5rem 1rem;border-radius:20px;border:1px solid var(--primary-color);color:var(--text-main);">🎾 Tennis</div>
                         </div>
-                    </div><img
-                        src="sports_collage.png"
-                        style="width:100%;max-width:400px;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,0.5);object-fit:cover;"
-                        alt="Sports Complex">
+                    </div>
+                    <img src="C:\SEM 2\HTML Files\exercises in ppt\Harneesh Groups of Institution_files\sports_collage.png" style="width:100%;max-width:400px;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,0.5);object-fit:cover;" alt="Sports Complex">
                 </div>
             </div>
             <div id="modal-innovation">
-                <h2
-                    style="color:var(--primary-color);margin-bottom:1.5rem;font-size:2rem;border-bottom:1px solid var(--glass-border);padding-bottom:1rem;">
-                    Innovation Hub</h2>
-                <div style="display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.5rem;"><img
-                        src="ai_tanks_drones.png"
-                        style="width:100%;max-width:400px;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,0.5);object-fit:cover;"
-                        alt="AI Innovation Hub">
+                <h2 style="color:var(--primary-color);margin-bottom:1.5rem;font-size:2rem;border-bottom:1px solid var(--glass-border);padding-bottom:1rem;">Innovation Hub</h2>
+                <div style="display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.5rem;">
                     <div style="flex:1;min-width:300px;">
-                        <h3 style="color:var(--secondary-color);font-size:1.5rem;margin-bottom:1rem;">Military & AI
-                            Innovations</h3>
-                        <p style="color:var(--text-muted);line-height:1.6;margin-bottom:1rem;">Our college has
-                            successfully invented breakthrough technologies used directly in defense and civilian tech.
-                        </p>
+                        <h3 style="color:var(--secondary-color);font-size:1.5rem;margin-bottom:1rem;">Military & AI Innovations</h3>
+                        <p style="color:var(--text-muted);line-height:1.6;margin-bottom:1rem;">Our college has successfully invented breakthrough technologies used directly in defense and civilian tech.</p>
                         <ul style="color:var(--text-main);list-style:none;padding:0;line-height:2;">
-                            <li>🚀 <strong style="color:white;">Advanced AI Drones:</strong> Autonomous surveillance
-                                drones used in modern tracking.</li>
-                            <li>🛡️ <strong style="color:white;">AI Prototype Tanks:</strong> Semi-autonomous tactical
-                                tanks created for military testing.</li>
-                            <li>🤖 <strong style="color:white;">Smart Robotics:</strong> Multipurpose humanoid and
-                                industrial robotics designed on-campus.</li>
+                            <li>🚀 <strong style="color:white;">Advanced AI Drones:</strong> Autonomous surveillance drones used in modern tracking.</li>
+                            <li>🛡️ <strong style="color:white;">AI Prototype Tanks:</strong> Semi-autonomous tactical tanks created for military testing.</li>
+                            <li>🤖 <strong style="color:white;">Smart Robotics:</strong> Multipurpose humanoid and industrial robotics designed on-campus.</li>
                         </ul>
                     </div>
                 </div>
@@ -619,200 +611,43 @@
                 </div>
             </div>
             <div id="modal-canteen">
-                <h2
-                    style="color:var(--primary-color);margin-bottom:1.5rem;font-size:2rem;border-bottom:1px solid var(--glass-border);padding-bottom:1rem;">
-                    College Canteen</h2>
-                <div style="display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.5rem;"><img
-                        src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=800"
-                        style="width:100%;max-width:400px;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,0.5);object-fit:cover;"
-                        alt="Canteen Food Spread">
+                <h2 style="color:var(--primary-color);margin-bottom:1.5rem;font-size:2rem;border-bottom:1px solid var(--glass-border);padding-bottom:1rem;">College Canteen</h2>
+                <div style="display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.5rem;">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=800" style="width:100%;max-width:400px;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,0.5);object-fit:cover;" alt="Canteen Food Spread">
                     <div style="flex:1;min-width:300px;">
-                        <h3 style="color:var(--secondary-color);font-size:1.5rem;margin-bottom:1rem;">Delicious &
-                            Hygienic Food</h3>
-                        <p style="color:var(--text-muted);line-height:1.6;margin-bottom:1rem;">Our active modern canteen
-                            provides high-quality and delicious meals with strict hygiene standards, keeping student
-                            budgets heavily in mind.</p>
-                        <h4 style="color:var(--text-main);margin-bottom:0.5rem;font-size:1.2rem;">Our Standard Menu:
-                        </h4>
-                        <ul
-                            style="color:var(--text-main);list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;">
-                            <li style="background:rgba(0,0,0,0.2);padding:0.5rem;border-radius:8px;">🥗 Fresh Salads &
-                                Greens</li>
-                            <li style="background:rgba(0,0,0,0.2);padding:0.5rem;border-radius:8px;">🍕 Wood-fired Pizza
-                            </li>
-                            <li style="background:rgba(0,0,0,0.2);padding:0.5rem;border-radius:8px;">🍔 Signature
-                                Burgers</li>
-                            <li style="background:rgba(0,0,0,0.2);padding:0.5rem;border-radius:8px;">🥪 Grilled
-                                Sandwiches</li>
-                            <li style="background:rgba(0,0,0,0.2);padding:0.5rem;border-radius:8px;">🍛 Traditional
-                                Meals (Thali)</li>
-                            <li style="background:rgba(0,0,0,0.2);padding:0.5rem;border-radius:8px;">🥤 Fresh Juices &
-                                Shakes</li>
-                            <li style="background:rgba(0,0,0,0.2);padding:0.5rem;border-radius:8px;">☕ Filter Coffee &
-                                Tea</li>
+                        <h3 style="color:var(--secondary-color);font-size:1.5rem;margin-bottom:1rem;">Delicious & Hygienic Food</h3>
+                        <p style="color:var(--text-muted);line-height:1.6;margin-bottom:1rem;">Our active modern canteen provides high-quality and delicious meals with strict hygiene standards, keeping student budgets heavily in mind.</p>
+                        <h4 style="color:var(--text-main);margin-bottom:0.5rem;font-size:1.2rem;">Our Standard Menu:</h4>
+                        <ul style="color:var(--text-main);list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;">
+                            <li style="background:rgba(0,0,0,0.2);padding:0.5rem;border-radius:8px;">🥗 Fresh Salads & Greens</li>
+                            <li style="background:rgba(0,0,0,0.2);padding:0.5rem;border-radius:8px;">🍕 Wood-fired Pizza</li>
+                            <li style="background:rgba(0,0,0,0.2);padding:0.5rem;border-radius:8px;">🍔 Signature Burgers</li>
+                            <li style="background:rgba(0,0,0,0.2);padding:0.5rem;border-radius:8px;">🥪 Grilled Sandwiches</li>
+                            <li style="background:rgba(0,0,0,0.2);padding:0.5rem;border-radius:8px;">🍛 Traditional Meals (Thali)</li>
+                            <li style="background:rgba(0,0,0,0.2);padding:0.5rem;border-radius:8px;">🥤 Fresh Juices & Shakes</li>
+                            <li style="background:rgba(0,0,0,0.2);padding:0.5rem;border-radius:8px;">☕ Filter Coffee & Tea</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div id="modal-academic">
-                <h2
-                    style="color:var(--primary-color);margin-bottom:1.5rem;font-size:2rem;border-bottom:1px solid var(--glass-border);padding-bottom:1rem;">
-                    Academic Block</h2>
+                <h2 style="color:var(--primary-color);margin-bottom:1.5rem;font-size:2rem;border-bottom:1px solid var(--glass-border);padding-bottom:1rem;">Academic Block</h2>
                 <div style="display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.5rem;">
                     <div style="flex:1;min-width:300px;">
-                        <h3 style="color:var(--secondary-color);font-size:1.5rem;margin-bottom:1rem;">Modern
-                            Air-Conditioned Classrooms</h3>
-                        <p style="color:var(--text-muted);line-height:1.6;margin-bottom:1rem;">Step into our high-tech
-                            academic block designed to foster maximum concentration and an engaging, interactive
-                            learning environment.</p>
+                        <h3 style="color:var(--secondary-color);font-size:1.5rem;margin-bottom:1rem;">Modern Air-Conditioned Classrooms</h3>
+                        <p style="color:var(--text-muted);line-height:1.6;margin-bottom:1rem;">Step into our high-tech academic block designed to foster maximum concentration and an engaging, interactive learning environment.</p>
                         <ul style="color:var(--text-main);list-style:none;padding:0;">
-                            <li
-                                style="margin-bottom:0.8rem;background:rgba(0,0,0,0.2);padding:0.8rem;border-radius:8px;">
-                                ❄️ <strong style="color:var(--secondary-color);">Fully Air-Conditioned:</strong> All
-                                classrooms maintain optimal, cool temperatures ensuring a comfortable, distraction-free
-                                learning environment for students all year long.</li>
-                            <li
-                                style="margin-bottom:0.8rem;background:rgba(0,0,0,0.2);padding:0.8rem;border-radius:8px;">
-                                📽️ <strong style="color:var(--secondary-color);">Smart Media Devices:</strong> Built-in
-                                overhead smart projection in every single hall.</li>
-                            <li
-                                style="margin-bottom:0.8rem;background:rgba(0,0,0,0.2);padding:0.8rem;border-radius:8px;">
-                                🪑 <strong style="color:var(--secondary-color);">Ergonomic Seating:</strong> Comfortable
-                                desk designs prioritizing student posture.</li>
-                            <li
-                                style="margin-bottom:0.8rem;background:rgba(0,0,0,0.2);padding:0.8rem;border-radius:8px;">
-                                📶 <strong style="color:var(--secondary-color);">Free High-Speed Wi-Fi:</strong>
-                                Uninterrupted connectivity to research tools freely available to every student in class.
-                            </li>
+                            <li style="margin-bottom:0.8rem;background:rgba(0,0,0,0.2);padding:0.8rem;border-radius:8px;">❄️ <strong style="color:var(--secondary-color);">Fully Air-Conditioned:</strong> All classrooms maintain optimal, cool temperatures ensuring a comfortable, distraction-free learning environment for students all year long.</li>
+                            <li style="margin-bottom:0.8rem;background:rgba(0,0,0,0.2);padding:0.8rem;border-radius:8px;">📽️ <strong style="color:var(--secondary-color);">Smart Media Devices:</strong> Built-in overhead smart projection in every single hall.</li>
+                            <li style="margin-bottom:0.8rem;background:rgba(0,0,0,0.2);padding:0.8rem;border-radius:8px;">🪑 <strong style="color:var(--secondary-color);">Ergonomic Seating:</strong> Comfortable desk designs prioritizing student posture.</li>
+                            <li style="margin-bottom:0.8rem;background:rgba(0,0,0,0.2);padding:0.8rem;border-radius:8px;">📶 <strong style="color:var(--secondary-color);">Free High-Speed Wi-Fi:</strong> Uninterrupted connectivity to research tools freely available to every student in class.</li>
                         </ul>
-                    </div><img
-                        src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&q=80&w=800"
-                        style="width:100%;max-width:400px;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,0.5);object-fit:cover;"
-                        alt="Modern Smart Classroom">
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&q=80&w=800" style="width:100%;max-width:400px;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,0.5);object-fit:cover;" alt="Modern Smart Classroom">
                 </div>
             </div>
         </div>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const authSection = document.getElementById('auth');
-            const mainContent = document.getElementById('main-content');
-            const navLinks = document.getElementById('nav-links');
-            const logoutBtn = document.getElementById('logout-btn');
-            const loginForm = document.querySelector('.login-box form');
-            const registerForm = document.querySelector('.register-box form');
-            loginForm.addEventListener('submit', function (e) {
-                e.preventDefault();
-                if (this.checkValidity()) {
-                    const email = document.getElementById('login-email').value;
-                    const password = document.getElementById('login-password').value;
-                    if (email !== 'qwerty@gmail.com' || password !== '123456789') {
-                        alert('The credentials that you have entered is invalid');
-                        return;
-                    }
-                    authSection.style.display = 'none';
-                    mainContent.style.display = 'block';
-                    navLinks.style.display = 'flex';
-                    window.location.hash = '#home';
-                    window.scrollTo(0, 0);
-                }
-            });
-            registerForm.addEventListener('submit', function (e) {
-                e.preventDefault();
-                if (this.checkValidity()) {
-                    authSection.style.display = 'none';
-                    mainContent.style.display = 'block';
-                    navLinks.style.display = 'flex';
-                    window.location.hash = '#home';
-                    window.scrollTo(0, 0);
-                }
-            });
-            if (logoutBtn) {
-                logoutBtn.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    authSection.style.display = 'flex';
-                    mainContent.style.display = 'none';
-                    navLinks.style.display = 'none';
-                    document.querySelectorAll('.form-box form input').forEach(input => {
-                        if (input.type !== 'radio' && input.type !== 'checkbox' && input.type !== 'submit') {
-                            input.value = '';
-                        }
-                    });
-                    window.location.hash = '';
-                    window.scrollTo(0, 0);
-                });
-            }
-            const applySection = document.getElementById('apply');
-            const mainSections = ['home', 'about', 'gallery', 'courses'].map(id => document.getElementById(id));
-            const applyButtons = document.querySelectorAll('.course-card .btn');
-            const selectedCourseInput = document.getElementById('selected-course');
-            applyButtons.forEach(btn => {
-                btn.addEventListener('click', function () {
-                    const courseName = this.parentElement.querySelector('h3').innerText;
-                    selectedCourseInput.value = courseName;
-                });
-            });
-            window.addEventListener('hashchange', function () {
-                if (authSection.style.display !== 'none') return;
-                if (window.location.hash === '#apply') {
-                    mainSections.forEach(sec => { if (sec) sec.style.display = 'none'; });
-                    if (applySection) applySection.style.display = 'flex';
-                    window.scrollTo(0, 0);
-                } else {
-                    if (applySection) applySection.style.display = 'none';
-                    mainSections.forEach(sec => { if (sec) sec.style.display = 'flex'; });
-                }
-            });
-            const sections = document.querySelectorAll('section');
-            const navItems = document.querySelectorAll('.nav-links a:not(.btn-logout)');
-            const observerOptions = { root: null, rootMargin: '0px', threshold: 0.5 };
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        navItems.forEach(link => {
-                            link.classList.remove('active');
-                            if (link.getAttribute('href') === '#' + entry.target.id) {
-                                link.classList.add('active');
-                            }
-                        });
-                    }
-                });
-            }, observerOptions);
-            sections.forEach(section => {
-                if (section.id !== 'auth') observer.observe(section);
-            });
-
-            // Modal Functions
-            window.openGalleryModal = function (modalId) {
-                const modal = document.getElementById('gallery-modal');
-                const modalBody = document.getElementById('modal-dynamic-body');
-                const data = document.getElementById(modalId);
-
-                if (data && modal && modalBody) {
-                    modalBody.innerHTML = data.innerHTML;
-                    modal.style.display = 'flex';
-                    document.body.style.overflow = 'hidden';
-                }
-            };
-
-            window.closeGalleryModal = function () {
-                const modal = document.getElementById('gallery-modal');
-                if (modal) {
-                    modal.style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                }
-            };
-
-            const galleryModalElement = document.getElementById('gallery-modal');
-            if (galleryModalElement) {
-                galleryModalElement.addEventListener('click', function (e) {
-                    if (e.target === this) {
-                        closeGalleryModal();
-                    }
-                });
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
-
 </html>
