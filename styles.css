@@ -20,6 +20,9 @@
   font-family: 'Inter', sans-serif;
   scroll-behavior: smooth;
 }
+html {
+  scroll-padding-top: 75px;
+}
 body {
   color: var(--text-main);
   background-color: var(--bg-color-1);
@@ -265,7 +268,134 @@ section {
 .course-card { flex: 1 1 300px; max-width: 350px; padding: 2rem; text-align: center; transition: transform var(--transition-speed); }
 .course-card:hover { transform: translateY(-10px); }
 .course-icon { font-size: 3rem; margin-bottom: 1rem; }
+/* Application Form Styles */
+.styled-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.form-section {
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+.form-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+.form-section-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--glass-border);
+  padding-bottom: 1rem;
+}
+.form-section-header .icon {
+  font-size: 1.8rem;
+}
+.form-section-header h3 {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  margin: 0;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+.form-group label {
+  font-weight: 600;
+  color: var(--text-main);
+  font-size: 0.95rem;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group input[type="number"] {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: all var(--transition-speed);
+}
+.form-group input[type="date"] {
+  color-scheme: dark;
+}
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+.form-group input:focus {
+  border-color: var(--primary-color);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+.radio-group {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+.radio-label {
+  display: flex !important;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-weight: normal !important;
+}
+.radio-label input[type="radio"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--text-muted);
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  transition: all var(--transition-speed);
+  position: relative;
+  margin: 0;
+}
+.radio-label input[type="radio"]:checked {
+  border-color: var(--primary-color);
+}
+.radio-label input[type="radio"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--primary-color);
+}
+.radio-label:hover {
+  color: var(--text-main);
+}
+@media screen and (max-width: 600px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 footer { text-align: center; padding: 2rem; background: rgba(0, 0, 0, 0.5); margin-top: auto; }
+
 @media screen and (max-width: 900px) {
   .about-grid {
     grid-template-columns: 1fr;
@@ -274,14 +404,47 @@ footer { text-align: center; padding: 2rem; background: rgba(0, 0, 0, 0.5); marg
     min-height: 600px;
   }
 }
+
 @media screen and (max-width: 768px) {
   ul.nav-links {
-    display: none;
+    flex-direction: column !important;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: rgba(15, 23, 42, 0.95);
+    padding: 2rem;
+    gap: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-150%);
+    opacity: 0;
+    z-index: 99;
+  }
+  ul.nav-links.mobile-active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .w-md-auto {
+    width: 100% !important;
   }
   .hero h1 {
     font-size: 2.5rem;
   }
   section {
-    padding-top: 80px;
+    padding: 30px 5%;
+    min-height: auto !important;
+    height: auto !important;
+  }
+  h2 {
+    margin-bottom: 2rem;
+  }
+  .about-grid, .courses-flex {
+    gap: 1.5rem;
+  }
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }
