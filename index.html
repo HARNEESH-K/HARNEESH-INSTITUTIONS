@@ -3,31 +3,74 @@
 
 <head>
     <title>Harneesh Groups of Institution</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"><link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"><link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"><link rel="stylesheet" href="styles.css?v=2">
 </head>
-
 <body>
     <div class="animated-bg"></div>
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
-    <nav class="glass-panel" id="navbar">
-        <div class="nav-left">
-            <a href="#home" class="logo">Harneesh<span style="color: var(--secondary-color);"> Institutions</span></a>
+    <nav class="glass-panel fixed-top d-flex align-items-center justify-content-between" id="navbar" style="padding: 1rem 5%; min-height: 75px; z-index: 100;">
+        <div class="nav-left d-flex align-items-center" style="z-index: 20; flex: 1;">
+            <button id="mobile-menu-btn" class="d-md-none bg-transparent border-0 text-white fs-1 p-0 m-0"><i class="bi bi-list"></i></button>
+            <div class="input-group input-group-sm rounded-pill overflow-hidden d-none d-md-flex" style="border: 1px solid var(--glass-border); max-width: 250px;">
+                <input type="text" class="form-control border-0 shadow-none text-white px-3" placeholder="Search..." style="background: rgba(255,255,255,0.1);">
+                <button class="btn border-0 text-white px-3" style="background: rgba(255,255,255,0.1);"><i class="bi bi-search"></i></button>
+            </div>
         </div>
-        <ul class="nav-links" id="nav-links" style="display: none;">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#courses">Courses</a></li>
-            <li id="nav-profile-link"><a href="#profile">Profile</a></li>
-            <li><a href="#auth" class="btn btn-logout" id="logout-btn">Logout</a></li>
-        </ul>
+        <div class="nav-center d-flex justify-content-center text-center" style="z-index: 20;">
+            <a href="#home" class="logo text-nowrap">Harneesh<span style="color: var(--secondary-color);"> Institutions</span></a>
+        </div>
+        <div class="nav-right" style="flex: 1;">
+            <ul class="nav-links flex-grow-1 flex-md-row align-items-center justify-content-end mb-0" id="nav-links" style="display: none; padding-left: 0; gap: 1.5rem; margin-left: auto;">
+                <li class="d-md-none w-100 my-3">
+                    <div class="input-group input-group-sm rounded-pill overflow-hidden mx-auto" style="border: 1px solid var(--glass-border); max-width: 300px;">
+                        <input type="text" class="form-control border-0 shadow-none text-white px-3" placeholder="Search..." style="background: rgba(255,255,255,0.2);">
+                        <button class="btn border-0 text-white px-3" style="background: rgba(255,255,255,0.2);"><i class="bi bi-search"></i></button>
+                    </div>
+                </li>
+                <li><a href="#home" style="text-decoration: none;">Home</a></li>
+                <li><a href="#about" style="text-decoration: none;">About</a></li>
+                <li><a href="#gallery" style="text-decoration: none;">Gallery</a></li>
+                <li><a href="#courses" style="text-decoration: none;">Courses</a></li>
+                <li id="nav-profile-link"><a href="#profile" style="text-decoration: none;">Profile</a></li>
+                <li><a href="#auth" class="btn btn-logout py-2 px-3 m-0" id="logout-btn">Logout</a></li>
+            </ul>
+        </div>
     </nav>
+    <style>
+        @media screen and (max-width: 768px) {
+            #nav-links.mobile-active { top: 75px !important; z-index: 9999 !important; background-color: #0f172a !important; }
+            .nav-left { flex: unset !important; }
+            .nav-right { flex: unset !important; }
+            #nav-links.mobile-active li {
+                opacity: 0;
+                transform: translateX(40px);
+                animation: slideMenuLink 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+            }
+            #nav-links.mobile-active li:nth-child(1) { animation-delay: 0.05s; }
+            #nav-links.mobile-active li:nth-child(2) { animation-delay: 0.1s; }
+            #nav-links.mobile-active li:nth-child(3) { animation-delay: 0.15s; }
+            #nav-links.mobile-active li:nth-child(4) { animation-delay: 0.2s; }
+            #nav-links.mobile-active li:nth-child(5) { animation-delay: 0.25s; }
+            #nav-links.mobile-active li:nth-child(6) { animation-delay: 0.3s; }
+            #nav-links.mobile-active li:nth-child(7) { animation-delay: 0.35s; }
+        }
+        
+        @keyframes slideMenuLink {
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .logo { transition: transform 0.4s ease, text-shadow 0.4s ease; display: inline-block; }
+        .logo:hover { transform: scale(1.08) perspective(100px) rotateX(5deg); text-shadow: 0 0 15px var(--secondary-color); }
+        .nav-links li a { transition: transform 0.3s ease-out, color 0.3s; display: inline-block; }
+        .nav-links li a:hover { transform: translateY(-3px); }
+        #mobile-menu-btn { transition: transform 0.3s; }
+        #mobile-menu-btn:active { transform: scale(0.85); }
+    </style>
     <section id="auth">
         <div class="content-wrapper" style="display:flex;justify-content:center;align-items:center;min-height:100vh;">
             <div class="login-card-picly glass-panel" style="display:flex;border-radius:20px;overflow:hidden;width:100%;max-width:800px;min-height:480px;flex-wrap:wrap;">
                 <div class="card-left-picly" style="background:rgba(0,0,0,0.3);border-right:1px solid var(--glass-border);flex:1;min-width:300px;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:2rem;">
-                    <img src="C:\SEM 2\HTML Files\exercises in ppt\Harneesh Groups of Institution_files\HArneesh Institutions Logo.png" alt="Company Logo" style="max-width:150px;height:auto;border-radius:10px;margin-bottom:0.5rem;">
+                    <img src="HArneesh Institutions Logo.png" alt="Company Logo" style="max-width:150px;height:auto;border-radius:10px;margin-bottom:0.5rem;">
                     <p style="color:var(--text-main);font-weight:600;font-size:1.2rem;text-align:center;margin:0;">Harneesh Institutions</p>
                 </div>
                 <div class="card-right-picly" style="flex:1.2;min-width:350px;position:relative;padding:0;color:var(--text-main);background:transparent;">
@@ -36,7 +79,7 @@
                         <div class="form-box login-box" style="background:none;border:none;box-shadow:none;padding:3rem;">
                             <h2 style="color:var(--text-main);font-size:2.2rem;text-align:center;margin-bottom:2.5rem;font-weight:600;background:none;-webkit-text-fill-color:initial;">Log In</h2>
                             <form action="#home" method="GET">
-                                <div class="input-line-picly" style="margin-bottom:2rem;"><input type="text" id="login-email" name="email" placeholder="Username" required style="width:100%;padding:10px 0;border:none;border-bottom:1px solid var(--text-muted);background:transparent;color:var(--text-main);font-size:1rem;outline:none;transition:border-color 0.3s;border-radius:0;" onfocus="this.style.borderBottomColor='var(--primary-color)'" onblur="this.style.borderBottomColor='var(--text-muted)'"></div>
+                                <div class="input-line-picly" style="margin-bottom:2rem;"><input type="text" id="login-email" name="email" placeholder="E-Mail" required style="width:100%;padding:10px 0;border:none;border-bottom:1px solid var(--text-muted);background:transparent;color:var(--text-main);font-size:1rem;outline:none;transition:border-color 0.3s;border-radius:0;" onfocus="this.style.borderBottomColor='var(--primary-color)'" onblur="this.style.borderBottomColor='var(--text-muted)'"></div>
                                 <div class="input-line-picly" style="margin-bottom:2rem;"><input type="password" id="login-password" name="password" placeholder="Password" required minlength="8" style="width:100%;padding:10px 0;border:none;border-bottom:1px solid var(--text-muted);background:transparent;color:var(--text-main);font-size:1rem;outline:none;transition:border-color 0.3s;border-radius:0;" onfocus="this.style.borderBottomColor='var(--primary-color)'" onblur="this.style.borderBottomColor='var(--text-muted)'"></div>
                                 <div class="checkbox-remember-picly" style="display:flex;justify-content:center;align-items:center;gap:0.5rem;margin-bottom:1rem;color:var(--text-muted);font-size:0.9rem;"><input type="checkbox" id="remember-me" style="accent-color:var(--primary-color);cursor:pointer;width:auto;"><label for="remember-me" style="cursor:pointer;">Remember Me!</label></div>
                                 <button type="submit" class="btn-pill-picly" style="display:block;width:60%;margin:0 auto 1.5rem auto;padding:10px;background:transparent;border:1px solid var(--primary-color);border-radius:30px;color:var(--text-main);font-weight:600;font-size:1rem;cursor:pointer;transition:all 0.3s ease;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white';" onmouseout="this.style.background='transparent'; this.style.color='var(--text-main)';">Submit</button>
@@ -65,7 +108,7 @@
     </section>
     <div id="main-content" style="display: none;">
         <section id="home">
-            <div class="hero">
+            <div class="hero" data-aos="zoom-in" data-aos-duration="1000">
                 <h1>Empowering Minds, Shaping the Future</h1>
                 <p>Welcome to Harneesh Groups of Institution. We provide world-class education, state-of-the-art
                     facilities, and an environment that fosters innovation and leadership.</p>
@@ -79,7 +122,7 @@
         <section id="about">
             <div class="content-wrapper">
                 <h2>About Our Institution</h2>
-                <div class="about-grid">
+                <div class="about-grid" data-aos="fade-up" data-aos-duration="1000">
                     <div class="about-image glass-panel"
                         style="position: relative; height: 400px; display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: inset 0 0 30px rgba(0,0,0,0.5);">
                         <div
@@ -114,112 +157,29 @@
         <section id="gallery">
             <div class="content-wrapper">
                 <h2>Campus Gallery</h2>
-                <div class="gallery-grid">
-                    <div class="gallery-item glass-panel" onclick="openGalleryModal('modal-library')"
-                        style="cursor: pointer;"><img
-                            src="Central Library.jpeg"
-                            alt="Central Library">
-                        <div class="gallery-caption">Central Library</div>
-                    </div>
-                    <div class="gallery-item glass-panel" onclick="openGalleryModal('modal-labs')"
-                        style="cursor: pointer;"><img
-                            src="C:\\SEM 2\\HTML Files\\exercises in ppt\\Harneesh Groups of Institution_files\\Harneesh Laboratory.png"
-                            alt="Labs Offered in Our College">
-                        <div class="gallery-caption">Labs Offered in Our College</div>
-                    </div>
-                    <div class="gallery-item glass-panel" onclick="openGalleryModal('modal-sports')"
-                        style="cursor: pointer;"><img
-                            src="C:\\SEM 2\\HTML Files\\exercises in ppt\\Harneesh Groups of Institution_files\\Harneesh Sports Complex.png"
-                            alt="Sports Complex">
-                        <div class="gallery-caption">Sports Complex</div>
-                    </div>
-                    <div class="gallery-item glass-panel" onclick="openGalleryModal('modal-auditorium')"
-                        style="cursor: pointer;"><img
-                            src="C:\\SEM 2\\HTML Files\\exercises in ppt\\Harneesh Groups of Institution_files\\Harneesh Auditorium.png"
-                            alt="Auditorium">
-                        <div class="gallery-caption">Auditorium</div>
-                    </div>
-                    <div class="gallery-item glass-panel" onclick="openGalleryModal('modal-innovation')"
-                        style="cursor: pointer;"><img
-                            src="C:\\SEM 2\\HTML Files\\exercises in ppt\\Harneesh Groups of Institution_files\\Harneesh Innovation Hub.png"
-                            alt="Innovation Hub">
-                        <div class="gallery-caption">Innovation Hub</div>
-                    </div>
-                    <div class="gallery-item glass-panel" onclick="openGalleryModal('modal-green')"
-                        style="cursor: pointer;"><img
-                            src="C:\\SEM 2\\HTML Files\\exercises in ppt\\Harneesh Groups of Institution_files\\Harneesh Green Area.png"
-                            alt="Green Campus Area">
-                        <div class="gallery-caption">Green Campus Area</div>
-                    </div>
-                    <div class="gallery-item glass-panel" onclick="openGalleryModal('modal-hostel')"
-                        style="cursor: pointer;"><img
-                            src="C:\SEM 2\HTML Files\exercises in ppt\Harneesh Groups of Institution_files\harneesh hostels.png"
-                            alt="Hostel Facilities">
-                        <div class="gallery-caption">Hostel Facilities</div>
-                    </div>
-                    <div class="gallery-item glass-panel" onclick="openGalleryModal('modal-canteen')"
-                        style="cursor: pointer;"><img
-                            src="C:\SEM 2\HTML Files\exercises in ppt\Harneesh Groups of Institution_files\Harneesh Canteens.png"
-                            alt="College Canteen">
-                        <div class="gallery-caption">College Canteen</div>
-                    </div>
-                    <div class="gallery-item glass-panel" onclick="openGalleryModal('modal-academic')"
-                        style="cursor: pointer;"><img
-                            src="C:\SEM 2\HTML Files\exercises in ppt\Harneesh Groups of Institution_files\Harneesh classes.png"
-                            alt="Academic Block">
-                        <div class="gallery-caption">Academic Block</div>
-                    </div>
+                <div class="gallery-grid" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="gallery-item glass-panel" onclick="openGalleryModal('modal-library')" style="cursor: pointer;"><img src="Central Library.jpeg" alt="Central Library"><div class="gallery-caption">Central Library</div></div>
+                    <div class="gallery-item glass-panel" onclick="openGalleryModal('modal-labs')" style="cursor: pointer;"><img src="Harneesh Laboratory.png" alt="Labs Offered in Our College"><div class="gallery-caption">Labs Offered in Our College</div></div>
+                    <div class="gallery-item glass-panel" onclick="openGalleryModal('modal-sports')" style="cursor: pointer;"><img src="Harneesh Sports Complex.png" alt="Sports Complex"><div class="gallery-caption">Sports Complex</div></div>
+                    <div class="gallery-item glass-panel" onclick="openGalleryModal('modal-auditorium')" style="cursor: pointer;"><img src="Harneesh Auditorium.png" alt="Auditorium"><div class="gallery-caption">Auditorium</div></div>
+                    <div class="gallery-item glass-panel" onclick="openGalleryModal('modal-innovation')" style="cursor: pointer;"><img src="Harneesh Innovation Hub.png" alt="Innovation Hub"><div class="gallery-caption">Innovation Hub</div></div>
+                    <div class="gallery-item glass-panel" onclick="openGalleryModal('modal-green')" style="cursor: pointer;"><img src="Harneesh Green Area.png" alt="Green Campus Area"><div class="gallery-caption">Green Campus Area</div></div>
+                    <div class="gallery-item glass-panel" onclick="openGalleryModal('modal-hostel')" style="cursor: pointer;"><img src="harneesh hostels.png" alt="Hostel Facilities"><div class="gallery-caption">Hostel Facilities</div></div>
+                    <div class="gallery-item glass-panel" onclick="openGalleryModal('modal-canteen')" style="cursor: pointer;"><img src="Harneesh Canteens.png" alt="College Canteen"><div class="gallery-caption">College Canteen</div></div>
+                    <div class="gallery-item glass-panel" onclick="openGalleryModal('modal-academic')" style="cursor: pointer;"><img src="Harneesh classes.png" alt="Academic Block"><div class="gallery-caption">Academic Block</div></div>
                 </div>
             </div>
         </section>
         <section id="courses">
             <div class="content-wrapper">
                 <h2>Courses Offered</h2>
-                <div class="courses-flex">
-                    <div class="course-card glass-panel">
-                        <div class="course-icon">⚙️</div>
-                        <h3>B.Tech Engineering</h3>
-                        <p style="margin: 1rem 0;">Computer Science, Mechanical, Civil, and Electronics disciplines with
-                            guaranteed placement assistance.<br><strong style="color:var(--primary-color);">Fee: ₹1,90,000 / year</strong></p>
-                        <a href="#apply" class="btn" style="width:100%;">Apply Now</a>
-                    </div>
-                    <div class="course-card glass-panel">
-                        <div class="course-icon">📈</div>
-                        <h3>MBA / BBA</h3>
-                        <p style="margin: 1rem 0;">Mastering business administration, finance, and human resources for
-                            the executives of tomorrow.<br><strong style="color:var(--primary-color);">Fee: ₹2,40,000 / year</strong></p>
-                        <a href="#apply" class="btn" style="width:100%;">Apply Now</a>
-                    </div>
-                    <div class="course-card glass-panel">
-                        <div class="course-icon">💻</div>
-                        <h3>BCA / MCA</h3>
-                        <p style="margin: 1rem 0;">Advanced computer applications, software development, and modern IT
-                            infrastructure programs.<br><strong style="color:var(--primary-color);">Fee: ₹1,50,000 / year</strong></p>
-                        <a href="#apply" class="btn" style="width:100%;">Apply Now</a>
-                    </div>
-                    <div class="course-card glass-panel">
-                        <div class="course-icon">⚙️</div>
-                        <h3>Mechanical Engineering</h3>
-                        <p style="margin: 1rem 0;">Delve into the design, analysis, and manufacturing of mechanical
-                            systems with our state-of-the-art labs.<br><strong style="color:var(--primary-color);">Fee: ₹1,95,000 / year</strong></p>
-                        <a href="#apply" class="btn"
-                            style="width:100%;">Apply Now</a>
-                    </div>
-                    <div class="course-card glass-panel">
-                        <div class="course-icon">🏗️</div>
-                        <h3>Civil Engineering</h3>
-                        <p style="margin: 1rem 0;">Learn to build the future with structural design, urban planning, and
-                            sustainable construction practices.<br><strong style="color:var(--primary-color);">Fee: ₹1,75,000 / year</strong></p>
-                        <a href="#apply" class="btn"
-                            style="width:100%;">Apply Now</a>
-                    </div>
-                    <div class="course-card glass-panel">
-                        <div class="course-icon">🤖</div>
-                        <h3>Artificial Intelligence</h3>
-                        <p style="margin: 1rem 0;">Master machine learning, neural networks, and AI fundamentals to
-                            innovate the software of tomorrow.<br><strong style="color:var(--primary-color);">Fee: ₹2,50,000 / year</strong></p>
-                        <a href="#apply" class="btn" style="width:100%;">Apply Now</a>
-                    </div>
+                <div class="courses-flex" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="course-card glass-panel"><div class="course-icon">⚙️</div><h3>B.Tech Engineering</h3><p style="margin: 1rem 0;">Computer Science, Mechanical, Civil, and Electronics disciplines with guaranteed placement assistance.<br><strong style="color:var(--primary-color);">Fee: ₹1,90,000 / year</strong></p><a href="#apply" class="btn" style="width:100%;">Apply Now</a></div>
+                    <div class="course-card glass-panel"><div class="course-icon">📈</div><h3>MBA / BBA</h3><p style="margin: 1rem 0;">Mastering business administration, finance, and human resources for the executives of tomorrow.<br><strong style="color:var(--primary-color);">Fee: ₹2,40,000 / year</strong></p><a href="#apply" class="btn" style="width:100%;">Apply Now</a></div>
+                    <div class="course-card glass-panel"><div class="course-icon">💻</div><h3>BCA / MCA</h3><p style="margin: 1rem 0;">Advanced computer applications, software development, and modern IT infrastructure programs.<br><strong style="color:var(--primary-color);">Fee: ₹1,50,000 / year</strong></p><a href="#apply" class="btn" style="width:100%;">Apply Now</a></div>
+                    <div class="course-card glass-panel"><div class="course-icon">⚙️</div><h3>Mechanical Engineering</h3><p style="margin: 1rem 0;">Delve into the design, analysis, and manufacturing of mechanical systems with our state-of-the-art labs.<br><strong style="color:var(--primary-color);">Fee: ₹1,95,000 / year</strong></p><a href="#apply" class="btn" style="width:100%;">Apply Now</a></div>
+                    <div class="course-card glass-panel"><div class="course-icon">🏗️</div><h3>Civil Engineering</h3><p style="margin: 1rem 0;">Learn to build the future with structural design, urban planning, and sustainable construction practices.<br><strong style="color:var(--primary-color);">Fee: ₹1,75,000 / year</strong></p><a href="#apply" class="btn" style="width:100%;">Apply Now</a></div>
+                    <div class="course-card glass-panel"><div class="course-icon">🤖</div><h3>Artificial Intelligence</h3><p style="margin: 1rem 0;">Master machine learning, neural networks, and AI fundamentals to innovate the software of tomorrow.<br><strong style="color:var(--primary-color);">Fee: ₹2,50,000 / year</strong></p><a href="#apply" class="btn" style="width:100%;">Apply Now</a></div>
                 </div>
             </div>
         </section>
@@ -228,9 +188,7 @@
                 <button type="button" class="btn btn-logout" onclick="window.location.hash='#courses'" style="margin-bottom:2rem;display:inline-flex;align-items:center;gap:0.5rem;background:transparent;border:none;color:var(--secondary-color);padding:0;font-size:1.1rem;">&larr; Back to Courses</button>
                 <h1 style="font-size:3rem;text-align:center;margin-bottom:1rem;color:var(--primary-color);">Student Application Form</h1>
                 <p style="text-align:center; color: var(--text-muted); margin-bottom: 3rem; font-size: 1.1rem;">Begin your journey towards excellence. Fill out the details below.</p>
-                
                 <form id="application-main-form" class="styled-form">
-                    
                     <div class="form-section">
                         <div class="form-section-header">
                             <span class="icon">👤</span>
@@ -264,7 +222,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="form-section">
                         <div class="form-section-header">
                             <span class="icon">🏠</span>
@@ -289,7 +246,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="form-section">
                         <div class="form-section-header">
                             <span class="icon">🎓</span>
@@ -310,7 +266,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="form-section">
                         <div class="form-section-header">
                             <span class="icon">📚</span>
@@ -338,7 +293,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="form-section">
                         <div class="form-section-header">
                             <span class="icon">✨</span>
@@ -376,7 +330,6 @@
                 </form>
             </div>
         </section>
-
         <section id="profile" style="display:none;">
             <div class="content-wrapper" style="display:flex;justify-content:center;align-items:center;">
                 <div class="glass-panel" style="width:100%;max-width:700px;padding:3rem;border-radius:20px;">
@@ -404,31 +357,23 @@
                 </div>
             </div>
         </section>
-
         <section id="payment" style="display:none;">
             <div class="content-wrapper" style="display:flex;justify-content:center;align-items:center;">
                 <div class="glass-panel" style="width:100%;max-width:900px;padding:3rem;border-radius:20px;">
                     <button type="button" class="btn btn-logout" onclick="window.location.hash='#apply'" style="margin-bottom:2rem;display:inline-flex;align-items:center;gap:0.5rem;background:transparent;border:none;color:var(--secondary-color);padding:0;font-size:1.1rem;">&larr; Back to Application</button>
                     <h2 style="color:var(--primary-color);margin-bottom:1rem;text-align:center;font-size:2.5rem;background:none;-webkit-text-fill-color:initial;">Fee Payment Portal</h2>
                     <p style="text-align:center; color: var(--text-muted); margin-bottom: 3rem; font-size: 1.1rem;">Complete your application by clearing the requisite admission fees.</p>
-                    
                     <div style="display:flex;flex-wrap:wrap;gap:3rem;margin-top:2rem;">
-                        <!-- Fee Breakdown -->
                         <div style="flex:1;min-width:300px;background:rgba(0,0,0,0.2);padding:2rem;border-radius:12px;border:1px solid var(--glass-border);">
                             <h3 style="color:var(--secondary-color);margin-bottom:1.5rem;font-size:1.4rem;">Fee Structure</h3>
                             <h4 id="payment-course-name" style="color:white;margin-bottom:1.5rem;font-size:1.2rem;border-bottom:1px solid rgba(255,255,255,0.1);padding-bottom:1rem;">Course Name</h4>
-                            
                             <ul id="payment-fee-list" style="list-style:none;padding:0;color:var(--text-muted);line-height:2.5;font-size:1.05rem;">
-                                <!-- dynamically populated -->
                             </ul>
-                            
                             <div style="margin-top:1.5rem;border-top:1px solid rgba(255,255,255,0.2);padding-top:1.5rem;display:flex;justify-content:space-between;color:white;font-weight:bold;font-size:1.4rem;">
                                 <span>Total Amount:</span>
                                 <span id="payment-total-amount">₹0</span>
                             </div>
                         </div>
-                        
-                        <!-- Payment Form -->
                         <div style="flex:1.2;min-width:300px;">
                             <h3 style="color:var(--secondary-color);margin-bottom:1.5rem;font-size:1.4rem;">Payment Details</h3>
                             <form id="checkout-form" class="styled-form" style="gap:1.5rem;">
@@ -457,6 +402,44 @@
                 </div>
             </div>
         </section>
+        <section id="contact" data-aos="fade-up" data-aos-duration="1000">
+            <div class="content-wrapper">
+                <h2>Contact Us</h2>
+                <div class="glass-panel p-4 p-md-5 mx-auto" style="max-width: 800px; border-radius: 20px;">
+                    <form>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control border-secondary text-white" id="contactName" placeholder="Your Name" style="background: rgba(255,255,255,0.05);" required>
+                                    <label for="contactName" class="text-white-50">Your Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control border-secondary text-white" id="contactEmail" placeholder="Your Email" style="background: rgba(255,255,255,0.05);" required>
+                                    <label for="contactEmail" class="text-white-50">Your Email</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control border-secondary text-white" id="contactSubject" placeholder="Subject" style="background: rgba(255,255,255,0.05);" required>
+                                    <label for="contactSubject" class="text-white-50">Subject</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control border-secondary text-white" id="contactMessage" placeholder="Message" style="background: rgba(255,255,255,0.05); height: 150px" required></textarea>
+                                    <label for="contactMessage" class="text-white-50">Message</label>
+                                </div>
+                            </div>
+                            <div class="col-12 text-center mt-4">
+                                <button type="submit" class="btn px-5 py-2 rounded-pill shadow-lg" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; border: none;">Send Message <i class="bi bi-send ms-2"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
         <footer>
             <p>&copy; 2026 Harneesh Groups of Institution. All Rights Reserved. Designed purely with HTML & CSS.</p>
         </footer>
@@ -471,28 +454,7 @@
         </div>
 
         <div style="display:none;">
-            <div id="modal-library">
-                <h2
-                    style="color:var(--primary-color);margin-bottom:1.5rem;font-size:2rem;border-bottom:1px solid var(--glass-border);padding-bottom:1rem;">
-                    Central Library</h2>
-                <div style="display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.5rem;"><img
-                        src="C:\SEM 2\HTML Files\exercises in ppt\Harneesh Groups of Institution_files\lib_portraits.png"
-                        style="width:100%;max-width:400px;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,0.5);object-fit:cover;"
-                        alt="Library Portrait">
-                    <div style="flex:1;min-width:300px;">
-                        <h3 style="color:var(--secondary-color);font-size:1.5rem;margin-bottom:0.5rem;">Library
-                            Collection</h3>
-                        <p style="font-size:3rem;font-weight:bold;color:var(--text-main);margin-bottom:1rem;">150,000+
-                            <span style="font-size:1.2rem;font-weight:normal;color:var(--text-muted);">Books</span>
-                        </p>
-                        <p style="color:var(--text-muted);line-height:1.6;margin-bottom:1rem;">Our Central Library is a
-                            beacon of knowledge with extensive collections covering all major disciplines. The rich
-                            portraits adorning the walls inspire our students daily.</p>
-                        <p style="color:var(--text-muted);line-height:1.6;">From rare manuscripts to modern digital
-                            archives, we provide unlimited resources in a sophisticated, quiet environment.</p>
-                    </div>
-                </div>
-            </div>
+            <div id="modal-library"><h2 style="color:var(--primary-color);margin-bottom:1.5rem;font-size:2rem;border-bottom:1px solid var(--glass-border);padding-bottom:1rem;">Central Library</h2><div style="display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.5rem;"><img src="lib_portraits.png" style="width:100%;max-width:400px;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,0.5);object-fit:cover;" alt="Library Portrait"><div style="flex:1;min-width:300px;"><h3 style="color:var(--secondary-color);font-size:1.5rem;margin-bottom:0.5rem;">Library Collection</h3><p style="font-size:3rem;font-weight:bold;color:var(--text-main);margin-bottom:1rem;">150,000+ <span style="font-size:1.2rem;font-weight:normal;color:var(--text-muted);">Books</span></p><p style="color:var(--text-muted);line-height:1.6;margin-bottom:1rem;">Our Central Library is a beacon of knowledge with extensive collections covering all major disciplines. The rich portraits adorning the walls inspire our students daily.</p><p style="color:var(--text-muted);line-height:1.6;">From rare manuscripts to modern digital archives, we provide unlimited resources in a sophisticated, quiet environment.</p></div></div></div>
             <div id="modal-labs">
                 <h2 style="color:var(--primary-color);margin-bottom:1.5rem;font-size:2rem;border-bottom:1px solid var(--glass-border);padding-bottom:1rem;">Labs Offered in Our College</h2>
                 <div style="display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.5rem;">
@@ -507,26 +469,10 @@
                             <li style="margin-bottom:0.8rem;background:rgba(0,0,0,0.2);padding:0.8rem;border-radius:8px;">🤖 <strong style="color:var(--secondary-color);">Robotics Lab:</strong> AI-powered automation. Faculty experience: 18+ years</li>
                         </ul>
                     </div>
-                    <img src="C:\SEM 2\HTML Files\exercises in ppt\Harneesh Groups of Institution_files\lab_physics.png" style="width:100%;max-width:400px;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,0.5);object-fit:cover;" alt="Robotics and Physics Lab">
+                    <img src="lab_physics.png" style="width:100%;max-width:400px;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,0.5);object-fit:cover;" alt="Robotics and Physics Lab">
                 </div>
             </div>
-            <div id="modal-auditorium">
-                <h2
-                    style="color:var(--primary-color);margin-bottom:1.5rem;font-size:2rem;border-bottom:1px solid var(--glass-border);padding-bottom:1rem;">
-                    Grand Auditorium</h2>
-                <div style="display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.5rem;"><img
-                        src="C:\SEM 2\HTML Files\exercises in ppt\Harneesh Groups of Institution_files\auditorium.png"
-                        style="width:100%;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,0.5);object-fit:cover;max-height:350px;"
-                        alt="2000 Seat Auditorium">
-                    <p
-                        style="color:var(--text-main);font-size:1.1rem;line-height:1.8;text-align:justify;margin-top:1rem;">
-                        Our majestic auditorium has a massive seating capacity of <strong>2000 seats</strong> and is
-                        equipped with cutting-edge acoustics and visual technology. It is designed to host national
-                        level seminars, guest lectures, cultural fests, and huge symposia. Comfort, grandeur, and
-                        excellence define its architectural beauty.</p>
-                </div>
-            </div>
-
+            <div id="modal-auditorium"><h2 style="color:var(--primary-color);margin-bottom:1.5rem;font-size:2rem;border-bottom:1px solid var(--glass-border);padding-bottom:1rem;">Grand Auditorium</h2><div style="display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.5rem;"><img src="auditorium.png" style="width:100%;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,0.5);object-fit:cover;max-height:350px;" alt="2000 Seat Auditorium"><p style="color:var(--text-main);font-size:1.1rem;line-height:1.8;text-align:justify;margin-top:1rem;">Our majestic auditorium has a massive seating capacity of <strong>2000 seats</strong> and is equipped with cutting-edge acoustics and visual technology. It is designed to host national level seminars, guest lectures, cultural fests, and huge symposia. Comfort, grandeur, and excellence define its architectural beauty.</p></div></div>
             <div id="modal-sports">
                 <h2 style="color:var(--primary-color);margin-bottom:1.5rem;font-size:2rem;border-bottom:1px solid var(--glass-border);padding-bottom:1rem;">Sports Complex</h2>
                 <div style="display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.5rem;">
@@ -542,7 +488,7 @@
                             <div style="background:rgba(0,0,0,0.2);padding:0.5rem 1rem;border-radius:20px;border:1px solid var(--primary-color);color:var(--text-main);">🎾 Tennis</div>
                         </div>
                     </div>
-                    <img src="C:\SEM 2\HTML Files\exercises in ppt\Harneesh Groups of Institution_files\sports_collage.png" style="width:100%;max-width:400px;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,0.5);object-fit:cover;" alt="Sports Complex">
+                    <img src="sports_collage.png" style="width:100%;max-width:400px;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,0.5);object-fit:cover;" alt="Sports Complex">
                 </div>
             </div>
             <div id="modal-innovation">
@@ -559,57 +505,9 @@
                     </div>
                 </div>
             </div>
-            <div id="modal-green">
-                <h2
-                    style="color:var(--primary-color);margin-bottom:1.5rem;font-size:2rem;border-bottom:1px solid var(--glass-border);padding-bottom:1rem;">
-                    Green Campus Area</h2>
-                <div style="display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.5rem;">
-                    <div style="flex:1;min-width:300px;">
-                        <h3 style="color:var(--secondary-color);font-size:1.5rem;margin-bottom:1rem;">A Breath of Fresh
-                            Air</h3>
-                        <p style="color:var(--text-muted);line-height:1.6;margin-bottom:1rem;">Our campus boasts serene
-                            botanical gardens, shaded walkways, an organic vegetable farm, and a solar-powered gazebo
-                            park. We emphasize eco-friendly living with rainwater harvesting and zero-waste initiatives.
-                        </p>
-                    </div><img
-                        src="Harneesh Green Area.png"
-                        style="width:100%;max-width:400px;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,0.5);object-fit:cover;"
-                        alt="Greenery Areas">
-                </div>
-            </div>
+            <div id="modal-green"><h2 style="color:var(--primary-color);margin-bottom:1.5rem;font-size:2rem;border-bottom:1px solid var(--glass-border);padding-bottom:1rem;">Green Campus Area</h2><div style="display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.5rem;"><div style="flex:1;min-width:300px;"><h3 style="color:var(--secondary-color);font-size:1.5rem;margin-bottom:1rem;">A Breath of Fresh Air</h3><p style="color:var(--text-muted);line-height:1.6;margin-bottom:1rem;">Our campus boasts serene botanical gardens, shaded walkways, an organic vegetable farm, and a solar-powered gazebo park. We emphasize eco-friendly living with rainwater harvesting and zero-waste initiatives.</p></div><img src="Harneesh Green Area.png" style="width:100%;max-width:400px;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,0.5);object-fit:cover;" alt="Greenery Areas"></div></div>
 
-            <div id="modal-hostel">
-                <h2
-                    style="color:var(--primary-color);margin-bottom:1.5rem;font-size:2rem;border-bottom:1px solid var(--glass-border);padding-bottom:1rem;">
-                    Hostel Facilities</h2>
-                <div style="display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.5rem;">
-                    <div style="flex:1;min-width:300px;">
-                        <h3 style="color:var(--secondary-color);font-size:1.5rem;margin-bottom:1rem;">A Home Away From
-                            Home</h3>
-                        <ul style="color:var(--text-main);list-style:none;padding:0;">
-                            <li
-                                style="margin-bottom:0.8rem;background:rgba(0,0,0,0.2);padding:0.8rem;border-radius:8px;">
-                                🛏️ <strong style="color:var(--secondary-color);">Rooms Offered:</strong> Premium AC and
-                                Non-AC rooms available (Single, Double, Triple sharing).</li>
-                            <li
-                                style="margin-bottom:0.8rem;background:rgba(0,0,0,0.2);padding:0.8rem;border-radius:8px;">
-                                🚿 <strong style="color:var(--secondary-color);">World Class Restrooms:</strong>
-                                Ultra-hygienic attached restrooms for every wing.</li>
-                            <li
-                                style="margin-bottom:0.8rem;background:rgba(0,0,0,0.2);padding:0.8rem;border-radius:8px;">
-                                🍽️ <strong style="color:var(--secondary-color);">Quality Food:</strong> Multicuisine
-                                mess providing high-quality, nutritious meals daily.</li>
-                            <li
-                                style="margin-bottom:0.8rem;background:rgba(0,0,0,0.2);padding:0.8rem;border-radius:8px;">
-                                🧺 <strong style="color:var(--secondary-color);">Laundry Available:</strong> 24/7
-                                automated robotic laundry services available.</li>
-                        </ul>
-                    </div><img
-                        src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&q=80&w=800"
-                        style="width:100%;max-width:400px;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,0.5);object-fit:cover;"
-                        alt="Hostel Room Interior">
-                </div>
-            </div>
+            <div id="modal-hostel"><h2 style="color:var(--primary-color);margin-bottom:1.5rem;font-size:2rem;border-bottom:1px solid var(--glass-border);padding-bottom:1rem;">Hostel Facilities</h2><div style="display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.5rem;"><div style="flex:1;min-width:300px;"><h3 style="color:var(--secondary-color);font-size:1.5rem;margin-bottom:1rem;">A Home Away From Home</h3><ul style="color:var(--text-main);list-style:none;padding:0;"><li style="margin-bottom:0.8rem;background:rgba(0,0,0,0.2);padding:0.8rem;border-radius:8px;">🛏️ <strong style="color:var(--secondary-color);">Rooms Offered:</strong> Premium AC and Non-AC rooms available (Single, Double, Triple sharing).</li><li style="margin-bottom:0.8rem;background:rgba(0,0,0,0.2);padding:0.8rem;border-radius:8px;">🚿 <strong style="color:var(--secondary-color);">World Class Restrooms:</strong> Ultra-hygienic attached restrooms for every wing.</li><li style="margin-bottom:0.8rem;background:rgba(0,0,0,0.2);padding:0.8rem;border-radius:8px;">🍽️ <strong style="color:var(--secondary-color);">Quality Food:</strong> Multicuisine mess providing high-quality, nutritious meals daily.</li><li style="margin-bottom:0.8rem;background:rgba(0,0,0,0.2);padding:0.8rem;border-radius:8px;">🧺 <strong style="color:var(--secondary-color);">Laundry Available:</strong> 24/7 automated robotic laundry services available.</li></ul></div><img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&q=80&w=800" style="width:100%;max-width:400px;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,0.5);object-fit:cover;" alt="Hostel Room Interior"></div></div>
             <div id="modal-canteen">
                 <h2 style="color:var(--primary-color);margin-bottom:1.5rem;font-size:2rem;border-bottom:1px solid var(--glass-border);padding-bottom:1rem;">College Canteen</h2>
                 <div style="display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.5rem;">
@@ -648,6 +546,11 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
